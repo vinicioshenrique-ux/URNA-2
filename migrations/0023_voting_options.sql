@@ -1,0 +1,2 @@
+ALTER TABLE election_settings ADD COLUMN IF NOT EXISTS require_voter_code BOOLEAN NOT NULL DEFAULT true;
+CREATE TABLE IF NOT EXISTS anonymous_voting_sessions (id BIGSERIAL PRIMARY KEY, session_token TEXT UNIQUE NOT NULL, urna_id BIGINT REFERENCES urnas(id), created_at TIMESTAMPTZ NOT NULL DEFAULT now(), used BOOLEAN NOT NULL DEFAULT false);
