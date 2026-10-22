@@ -1,0 +1,1 @@
+UPDATE votes vo SET class_name=v.class_name FROM voters v WHERE vo.voter_id=v.id AND (vo.class_name IS NULL OR vo.class_name='');
