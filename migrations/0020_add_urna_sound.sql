@@ -1,0 +1,1 @@
+ALTER TABLE election_settings ADD COLUMN IF NOT EXISTS urna_sound_enabled BOOLEAN NOT NULL DEFAULT true;
