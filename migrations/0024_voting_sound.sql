@@ -1,0 +1,1 @@
+ALTER TABLE election_settings ADD COLUMN IF NOT EXISTS vote_sound_url TEXT;
