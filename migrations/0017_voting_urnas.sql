@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS urnas (id BIGSERIAL PRIMARY KEY, activation_code TEXT NOT NULL UNIQUE, name TEXT NOT NULL, active BOOLEAN NOT NULL DEFAULT true, device_token TEXT UNIQUE, last_seen_at TIMESTAMP, registered_at TIMESTAMP, created_at TIMESTAMP NOT NULL DEFAULT now());
