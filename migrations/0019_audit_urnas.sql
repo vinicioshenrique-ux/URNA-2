@@ -1,0 +1,1 @@
+ALTER TABLE audit_log ADD COLUMN IF NOT EXISTS urna_id BIGINT REFERENCES urnas(id);
