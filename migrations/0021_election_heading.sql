@@ -1,0 +1,1 @@
+ALTER TABLE election_settings ADD COLUMN IF NOT EXISTS election_label TEXT NOT NULL DEFAULT 'ELEIÇÃO ESCOLAR';
