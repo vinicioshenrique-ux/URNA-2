@@ -1,0 +1,10 @@
+CREATE TABLE candidates (
+  id BIGSERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  number TEXT NOT NULL UNIQUE,
+  slogan TEXT NOT NULL DEFAULT '',
+  description TEXT NOT NULL DEFAULT '',
+  votes INTEGER NOT NULL DEFAULT 0,
+  created_at TIMESTAMP NOT NULL DEFAULT now(),
+  updated_at TIMESTAMP NOT NULL DEFAULT now()
+)
