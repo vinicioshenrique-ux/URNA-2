@@ -1,0 +1,1 @@
+ALTER TABLE election_settings DROP COLUMN IF EXISTS demo_mode;
