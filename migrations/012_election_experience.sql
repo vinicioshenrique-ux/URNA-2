@@ -1,0 +1,1 @@
+ALTER TABLE election_settings ADD COLUMN IF NOT EXISTS secondary_color text DEFAULT '#FFBD00';
