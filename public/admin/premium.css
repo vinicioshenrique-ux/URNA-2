@@ -1,0 +1,486 @@
+/* Identidade visual profissional — camada não destrutiva */
+:root{--brand:#102f70;--brand2:#d8a83e;--ink:#17243b;--muted:#69768b;--bg:#f1f4f9;--card:#fff;--green:#168267;--red:#c43d4d}
+html{scroll-behavior:smooth}body{font-family:Inter,"Segoe UI",system-ui,-apple-system,sans-serif;background:radial-gradient(ellipse at 90% -10%,#dfe8f9 0,transparent 48%),linear-gradient(180deg,#f6f8fc,#eef2f8);letter-spacing:-.008em}
+.head{background:linear-gradient(110deg,#071632 0%,#102c60 65%,#173f7e 100%);padding:12px 24px;border-bottom:1px solid #ffffff2c;box-shadow:0 10px 35px #10254c22;backdrop-filter:blur(14px)}
+.headInner{max-width:1500px;gap:20px}.brandHead{min-width:220px}.brandHead b{font-size:15px;letter-spacing:.075em}.brandHead small{font-size:11px;letter-spacing:.04em;color:#d2def3;opacity:1}.brandLogo{width:46px;height:46px;border-radius:14px;border:1px solid #ffffff75;box-shadow:0 3px 12px #0002}.topNav{background:#ffffff0d;border:1px solid #ffffff1c;border-radius:15px;gap:3px}.navItem{border-radius:11px}.navItem.active{background:#ffffff27!important;box-shadow:inset 0 -2px #f4cb67!important}.navItem:focus-visible{outline:2px solid #ffdc80;outline-offset:2px}.navLabel{font-weight:750}.headBadge{background:#ffffff14;border-color:#ffffff38;color:#fff}
+.wrap{max-width:1340px;margin:28px auto;padding:0 24px}.box{border:1px solid #e0e7f0;border-radius:20px;box-shadow:0 8px 30px #142c4b0b,0 1px 2px #10244308;padding:clamp(19px,2.2vw,30px);margin-bottom:20px}.box h2{font-size:20px;font-weight:780;letter-spacing:-.025em;color:#142f67}.dashboard{border-top:0;position:relative;overflow:hidden}.dashboard:before{content:"";height:4px;position:absolute;inset:0 0 auto;background:linear-gradient(90deg,#c9a045,#f1d482,#d6a944)}.dashboard.homeScreen{min-height:min(700px,calc(100vh - 145px));padding:clamp(26px,4vw,55px);justify-content:flex-start}.homeIntro h1{font-size:clamp(29px,3vw,43px);font-weight:820;letter-spacing:-.045em;line-height:1.12}.homeHint{background:#f3f6fb;border:1px solid #dce5f2;color:#486180}
+button{font-weight:700;letter-spacing:.005em;border-radius:11px;box-shadow:0 3px 8px #142f6512;transition:background .18s,box-shadow .18s,transform .18s}button:hover:not(:disabled){box-shadow:0 7px 16px #16376b22;transform:translateY(-1px)}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #d9b65c;outline-offset:2px}button:disabled{cursor:not-allowed;opacity:.56;transform:none}
+input,textarea,select{border:1px solid #d8e0ec;border-radius:11px;background:#fbfcff;color:#17243b;min-height:42px;transition:border-color .18s,box-shadow .18s}input:focus,textarea:focus,select:focus{border-color:#5c82bd;box-shadow:0 0 0 3px #5c82bd20;outline:none}
+label{font-weight:650;color:#32435e}.muted{color:#718097}.row{border-bottom:1px solid #e9eef5;padding:14px 0}.row:last-child{border-bottom:0}.stat{letter-spacing:-.04em;font-variant-numeric:tabular-nums}.grid{gap:16px}.lockedNotice{border-radius:14px}.thumb{border:1px solid #e2e9f2}
+table{border-collapse:separate;border-spacing:0}th{background:#f1f5fb;color:#425570;font-size:12px;letter-spacing:.035em}td{border-bottom:1px solid #e9eef5}tr:hover td{background:#f9fbff}
+@media(max-width:950px){.head{padding:10px 14px}.headInner{gap:12px}.brandHead{min-width:185px}.topNav{overflow-x:auto;scrollbar-width:thin}.wrap{padding:0 14px;margin:18px auto}.box{border-radius:17px}.dashboard.homeScreen{min-height:unset}}
+@media(max-width:600px){.headInner{flex-wrap:wrap}.brandHead{min-width:0;flex:1}.topNav{order:3;width:100%;flex:1 1 100%}.navItem{flex:0 0 45px}.headBadge{display:none}.wrap{padding:0 10px}.box{padding:17px;border-radius:15px}.dashboard.homeScreen{padding:22px}.homeIntro h1{font-size:29px}button{min-height:42px}input,select,textarea{font-size:16px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation-duration:.01ms!important}}
+/* v185 — central administrativa e atalhos */
+.adminQuickLinks{display:flex;gap:7px;align-items:center;flex-shrink:0}
+.adminQuickLinks a{display:flex;gap:6px;align-items:center;justify-content:center;text-decoration:none;color:#fff;font-size:11px;font-weight:800;border:1px solid #ffffff4a;background:#ffffff18;padding:10px 12px;border-radius:11px;white-space:nowrap;transition:background .2s,transform .2s}
+.adminQuickLinks a:hover{background:#ffffff35;transform:translateY(-1px)}
+.adminLaunch{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:16px 0 22px}
+.adminLaunch>a{display:flex;align-items:center;gap:13px;padding:18px 16px;background:linear-gradient(145deg,#f9fbff,#eef4fd);border:1px solid #dce5f3;border-radius:17px;text-decoration:none;color:#17325d;min-width:0;transition:transform .2s,box-shadow .2s,border-color .2s}
+.adminLaunch>a:hover{transform:translateY(-2px);box-shadow:0 10px 26px #152c4b16;border-color:#9eb5da}
+.adminLaunch>a>span:nth-child(2){flex:1;min-width:0}.adminLaunch b{font-size:12px;display:block;letter-spacing:.02em}.adminLaunch small{display:block;font-size:11px;color:#627591;margin-top:5px;line-height:1.35}
+.launchIcon{width:42px;height:42px;flex-shrink:0;display:grid;place-items:center;background:#e1eaf9;color:var(--brand);border-radius:12px;font-size:21px}
+.dashboard .dashPanel,.box,.dashStat{transition:box-shadow .2s}.dashboard .dashPanel:hover{box-shadow:0 8px 24px #102d4b10}
+@media(max-width:1150px){.adminQuickLinks a span{display:none}.adminQuickLinks a{font-size:17px;padding:9px}.adminLaunch{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.adminLaunch{grid-template-columns:1fr}.adminQuickLinks{gap:4px}.adminQuickLinks a{padding:8px}.headInner{gap:8px}}
+/* v190 — sistema visual unificado: administração eleitoral */
+:root{--brand:#102b73;--brand2:#f2bb38;--bg:#f3f6fc;--ink:#162849;--muted:#687b99;--green:#10846a;--red:#c94c5c}
+body{background:#f3f6fc!important;color:var(--ink);font-family:Inter,"Segoe UI",system-ui,sans-serif}
+.head{background:linear-gradient(112deg,#07174b 0%,#122e79 70%,#19458b 100%)!important;box-shadow:0 3px 16px #091d4a20!important;padding:11px 19px!important}
+.headInner{gap:13px!important}.brandHead{min-width:0!important;gap:9px}.brandHead b{font-size:13px!important;letter-spacing:.035em}.brandHead small{font-size:10px!important}
+.brandLogo{width:42px!important;height:42px!important;border-radius:12px!important}
+.topNav{gap:4px!important;border-radius:12px!important;padding:4px!important}
+.navItem{border-radius:10px!important;min-height:39px!important;transition:background-color .16s!important;transform:none!important}
+.navItem:hover{transform:none!important}
+.navItem.active{background:#ffffff27!important;box-shadow:inset 3px 0 0 var(--brand2)!important;color:#fff!important}
+.adminQuickLinks{gap:6px!important}.adminQuickLinks a{border-radius:10px!important;font-size:11px!important;padding:8px 10px!important}
+.main,.mainContent,.content,.container{max-width:1480px}
+.tab.box{border:0!important;box-shadow:none!important;background:transparent!important;padding:clamp(14px,2vw,26px)!important;border-radius:0!important}
+.tab .toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:0 0 18px;padding:0 0 14px;border-bottom:1px solid #e0e8f4}
+.tab .toolbar h2{font-size:clamp(22px,2.1vw,29px)!important;color:#172e5e!important;letter-spacing:-.035em;margin:2px 0 4px!important}
+.tab .toolbar .eyebrow{font-size:10px;letter-spacing:.13em;color:#607aa9;font-weight:900}
+.tab .toolbar .muted{font-size:12px!important;color:#687b96}
+.box,.voterPanel,.dashPanel{border:1px solid #e1e8f3!important;border-radius:17px!important;background:#fff!important;box-shadow:0 3px 18px #18345a09!important}
+button{font-family:inherit!important;letter-spacing:0!important;font-weight:750!important;border-radius:10px!important;transition:background-color .15s,border-color .15s!important;transform:none!important}
+button:hover{transform:none!important}
+input,select{font-family:inherit!important;border:1px solid #d7e2f0!important;border-radius:10px!important;background:#fcfdff!important}
+input:focus,select:focus{border-color:#7294d5!important;outline:3px solid #5b85cd21!important}
+#tab-urnas .urnaOverview{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 16px}
+#tab-urnas .dashStat{min-width:0!important;min-height:98px!important;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:17px 19px!important;border:1px solid #e0e8f2!important;border-radius:15px!important;box-shadow:none!important;background:#fff!important;position:relative;overflow:hidden}
+#tab-urnas .dashStat:before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px;background:#7189b9}
+#tab-urnas .dashStat.success{background:#eefaf5!important}#tab-urnas .dashStat.success:before{background:#19a47e}
+#tab-urnas .dashStat.warning{background:#fff8e9!important}#tab-urnas .dashStat.warning:before{background:#edb33b}
+#tab-urnas .dashStat.accentStat{background:#edf2ff!important}#tab-urnas .dashStat.accentStat:before{background:#375dc6}
+#tab-urnas .dashStat span{font-size:11px!important;color:#637692!important;font-weight:800}
+#tab-urnas .dashStat strong{font-size:28px!important;color:#172d60!important;margin-top:6px}
+#tab-urnas>.voterPanel{padding:18px!important}
+#tab-urnas>.voterPanel>.grid{display:flex!important;align-items:center;gap:10px!important;flex-wrap:wrap;padding:0 0 16px;border-bottom:1px solid #e9edf5}
+#tab-urnas #urnaName{max-width:330px;flex:1 1 240px;min-height:42px;margin:0!important}
+#tab-urnas>.voterPanel>.grid button{min-height:42px!important;padding:10px 15px!important;font-size:11px!important}
+#tab-urnas .urnaCards{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(270px,1fr))!important;gap:12px!important;margin-top:16px!important}
+#tab-urnas .urnaCard{display:flex;flex-direction:column;min-width:0;padding:17px!important;border:1px solid #e1e8f2!important;border-radius:15px!important;background:#fff!important;box-shadow:0 2px 10px #172e5208!important;overflow:hidden}
+#tab-urnas .urnaCard:before{height:3px!important;background:linear-gradient(90deg,#153a95,#1aa8a3)!important}
+#tab-urnas .urnaCardTop{display:flex;justify-content:space-between;align-items:flex-start;gap:9px}
+#tab-urnas .urnaCard h3{font-size:14px!important;font-weight:850!important;color:#1b3568!important;margin:0 0 7px}
+#tab-urnas .urnaMeta{font-size:10px!important;color:#6e809b!important;line-height:1.5;overflow-wrap:anywhere}
+#tab-urnas .onlineDot{font-size:10px!important;white-space:nowrap;padding:5px 8px;border-radius:999px;background:#fff4de;color:#93600c}
+#tab-urnas .onlineDot.on{background:#e7f8ef;color:#117b52}
+#tab-urnas .urnaBig{font-size:26px!important;color:#18366c!important;margin:15px 0 5px!important}
+#tab-urnas .urnaActions{display:flex!important;gap:7px!important;flex-wrap:wrap!important;margin-top:auto!important;padding-top:15px}
+#tab-urnas .urnaActions button{flex:1 1 100px;min-height:35px!important;font-size:10px!important;padding:8px 9px!important;border-radius:9px!important;white-space:normal!important}
+#tab-urnas .urnaActions button.back{background:#edf3fc!important;color:#23416e!important}
+#tab-urnas .urnaActions button.danger{background:#fff0f1!important;color:#b5364c!important}
+#tab-urnas .urnaActions button.danger:disabled{opacity:.4}
+.adminLaunch>a{background:#fff!important;border:1px solid #dfe7f2!important;box-shadow:0 3px 14px #172e5208!important}
+@media(max-width:1100px){#tab-urnas .urnaOverview{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){#tab-urnas .urnaCards{grid-template-columns:1fr!important}#tab-urnas .dashStat{min-height:85px!important;padding:13px!important}#tab-urnas .dashStat strong{font-size:24px!important}#tab-urnas>.voterPanel{padding:12px!important}.tab.box{padding:12px!important}}
+/* v191 — alegre, translúcido, com gradientes da identidade configurada */
+:root{--joy-primary:var(--brand,#163d8f);--joy-accent:var(--brand2,#f4bd16)}
+body{background:radial-gradient(ellipse 650px 440px at 90% 5%,color-mix(in srgb,var(--joy-primary) 14%,transparent),transparent 72%),radial-gradient(ellipse 540px 430px at 5% 85%,color-mix(in srgb,var(--joy-accent) 17%,transparent),transparent 75%),#f3f6fc!important}
+.head{background:linear-gradient(115deg,color-mix(in srgb,var(--joy-primary) 88%,#08143a),var(--joy-primary) 67%,color-mix(in srgb,var(--joy-primary) 72%,var(--joy-accent)))!important;border-bottom:2px solid color-mix(in srgb,var(--joy-accent) 80%,white)!important}
+.navItem .navIcon{display:inline-grid;place-items:center;min-width:29px;min-height:29px;font-size:17px!important;background:#ffffff1c;border:1px solid #ffffff20;border-radius:10px;filter:drop-shadow(0 2px 3px #0002)}
+.navItem.active .navIcon{background:#ffffff36;border-color:#ffffff60}
+.navItem:hover .navIcon{background:#ffffff35}
+.tab .toolbar{position:relative}.tab .toolbar:after{content:'';position:absolute;bottom:-1px;left:0;width:100px;height:3px;border-radius:5px;background:linear-gradient(90deg,var(--joy-primary),var(--joy-accent))}
+.tab.box{background:transparent!important}
+.box,.voterPanel,.dashPanel{background:linear-gradient(145deg,#ffffffed,#ffffffc9)!important;backdrop-filter:blur(12px);border:1px solid #ffffff!important;box-shadow:0 7px 25px #1c3b6510,0 1px 5px #172c4a08!important}
+.dashStat{position:relative;overflow:hidden;background:linear-gradient(135deg,#fff,#f2f6ff)!important}
+.dashStat:after{content:'✦';position:absolute;right:14px;top:12px;font-size:21px;opacity:.3;color:var(--joy-primary)}
+#tab-urnas .dashStat.success{background:linear-gradient(135deg,#e3fff3,#f7fffd)!important}
+#tab-urnas .dashStat.warning{background:linear-gradient(135deg,#fff0d0,#fffaf0)!important}
+#tab-urnas .dashStat.accentStat{background:linear-gradient(135deg,color-mix(in srgb,var(--joy-primary) 13%,white),#f7faff)!important}
+#tab-urnas .dashStat:nth-child(1):after{content:'🟢';opacity:1}
+#tab-urnas .dashStat:nth-child(2):after{content:'⏳';opacity:1}
+#tab-urnas .dashStat:nth-child(3):after{content:'💤';opacity:1}
+#tab-urnas .dashStat:nth-child(4):after{content:'🗳️';opacity:1}
+#tab-urnas .urnaCard{background:linear-gradient(160deg,#ffffff,#f7faff)!important;border:1px solid #dce6f6!important;box-shadow:0 5px 18px #183d7310!important;transition:box-shadow .22s ease,border-color .22s ease,translate .22s ease!important}
+#tab-urnas .urnaCard:hover{translate:0 -3px;box-shadow:0 13px 26px #1c3f731d!important;border-color:color-mix(in srgb,var(--joy-primary) 35%,#dce6f6)!important}
+#tab-urnas .urnaCard:before{background:linear-gradient(90deg,var(--joy-primary),var(--joy-accent))!important}
+#tab-urnas .urnaBig{color:var(--joy-primary)!important}
+.adminLaunch>a{background:linear-gradient(135deg,#fff,#f1f5ff)!important;border:1px solid #e1e9f7!important;transition:translate .2s,box-shadow .2s!important}
+.adminLaunch>a:hover{translate:0 -3px;box-shadow:0 12px 27px #163d8f1b!important}
+.launchIcon{background:linear-gradient(145deg,color-mix(in srgb,var(--joy-primary) 14%,white),color-mix(in srgb,var(--joy-accent) 20%,white))!important;border:1px solid #ffffffb8;border-radius:14px!important;font-size:24px!important;box-shadow:0 4px 12px #1a367214}
+button.ok{background:linear-gradient(115deg,#0f997c,#21b89a)!important;color:white!important}
+button:not(:disabled):focus-visible,.navItem:focus-visible{outline:3px solid var(--joy-accent)!important;outline-offset:2px}
+@media(prefers-reduced-motion:reduce){#tab-urnas .urnaCard,.adminLaunch>a{transition:none!important;translate:none!important}}
+/* v192 — configuração por categorias, leitura rápida e menos rolagem */
+#tab-election{max-width:1160px;margin:0 auto}
+#tab-election .toolbar{margin-bottom:14px!important}
+#tab-election .settingsIntro{display:flex;align-items:center;gap:13px;padding:14px 17px;margin-bottom:12px;background:linear-gradient(115deg,color-mix(in srgb,var(--brand) 10%,white),color-mix(in srgb,var(--brand2) 13%,white));border:1px solid #dce6f6;border-radius:16px}
+#tab-election .settingsIntroIcon{width:46px;height:46px;flex-shrink:0;display:grid;place-items:center;border-radius:14px;background:#ffffffad;box-shadow:0 4px 14px #1a3d6911;font-size:25px}
+#tab-election .settingsIntro strong{display:block;color:#18345e;font-size:14px;margin-bottom:4px}
+#tab-election .settingsIntro small{display:block;color:#607390;font-size:12px}
+#tab-election .settingsTabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 15px}
+#tab-election .settingsTab{display:grid;grid-template-columns:37px minmax(0,1fr);grid-template-rows:auto auto;align-items:center;gap:1px 10px;text-align:left;padding:12px 14px;min-height:72px;background:linear-gradient(140deg,#fff,#f8faff);color:#253d66;border:1px solid #e0e8f4;border-radius:15px;box-shadow:0 3px 12px #1a3a640a;cursor:pointer}
+#tab-election .settingsTab>span{grid-row:1/3;display:grid;place-items:center;width:37px;height:37px;border-radius:11px;background:#edf3ff;font-size:20px}
+#tab-election .settingsTab b{font-size:12px;line-height:1.2}
+#tab-election .settingsTab small{font-size:10px;color:#6e8099}
+#tab-election .settingsTab:hover{border-color:#9bb7e4;background:#f5f9ff}
+#tab-election .settingsTab.active{background:linear-gradient(115deg,color-mix(in srgb,var(--brand) 13%,white),color-mix(in srgb,var(--brand2) 15%,white));border-color:color-mix(in srgb,var(--brand) 40%,#d9e4f5);box-shadow:inset 0 0 0 1px #ffffffaa,0 5px 16px #1a3d6612}
+#tab-election .settingsTab.active>span{background:#ffffffd9}
+#tab-election .settingsPage{padding:18px 20px;background:linear-gradient(150deg,#ffffffed,#fafdffec);border:1px solid #e0e8f4;border-radius:17px;box-shadow:0 5px 22px #193a6410}
+#tab-election .settingsPage[hidden],#tab-election .configPreview[hidden]{display:none!important}
+#tab-election .settingsPage>.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-bottom:13px}
+#tab-election .settingsPage input:not([type=color]):not([type=checkbox]):not([type=file]){min-height:42px}
+#tab-election .identityCard{margin:10px 0;padding:13px 15px;border:1px solid #e2eaf5;border-radius:13px;background:#f7faff}
+#tab-election .settingsColors{margin:11px 0 0;display:flex;align-items:center;gap:15px;flex-wrap:wrap}
+#tab-election .settingsColors label{font-size:12px;font-weight:800}
+#tab-election .soundToggle{margin:0 0 11px;padding:15px;border:1px solid #e0e9f5;border-radius:13px;background:linear-gradient(110deg,#fff,#f6f9ff);display:flex;align-items:center;gap:13px}
+#tab-election .soundToggle b{font-size:13px}
+#tab-election .soundToggle small{font-size:11px;line-height:1.5}
+#tab-election .adminControlGroup{margin:0;padding:0;border:0;background:transparent;box-shadow:none}
+#tab-election .adminControlHead,#tab-election .demoControl{padding:15px;background:#f7faff;border:1px solid #e0e9f4;border-radius:13px;margin:0 0 12px;gap:12px}
+#tab-election .adminDangerRow{padding:14px;border:1px solid #f4dfe2;border-radius:13px;background:linear-gradient(110deg,#fff8f8,#fffdfc);display:flex;flex-wrap:wrap;gap:8px}
+#tab-election .adminDangerRow button{margin:0!important}
+#tab-election .configPreview{margin:12px 0 0;padding:12px 16px;border:1px solid #e1e9f5;border-radius:14px;background:#f8fbff}
+#tab-election .configMock{padding:12px!important}
+#tab-election .saveBar{position:sticky;bottom:8px;z-index:8;display:flex;align-items:center;justify-content:space-between;gap:14px;margin:12px 0 0;padding:13px 17px;border:1px solid #d6e2f5;border-radius:15px;background:linear-gradient(120deg,#fffffff5,#f2f7fff5);backdrop-filter:blur(14px);box-shadow:0 8px 25px #1237651a}
+#tab-election .saveBar .saveMain{background:linear-gradient(115deg,var(--brand),color-mix(in srgb,var(--brand) 75%,var(--brand2)))!important;color:#fff!important}
+@media(max-width:750px){#tab-election .settingsTabs{gap:6px}#tab-election .settingsTab{display:flex;flex-direction:column;justify-content:center;text-align:center;padding:10px 5px;gap:5px;min-height:76px}#tab-election .settingsTab>span{width:29px;height:29px;font-size:16px}#tab-election .settingsTab b{font-size:10px}#tab-election .settingsTab small{display:none}#tab-election .settingsPage{padding:12px}#tab-election .settingsPage>.grid{grid-template-columns:1fr}#tab-election .saveBar{padding:10px;flex-wrap:wrap}#tab-election .saveBar .saveMain{width:100%}}
+/* v193 — workspace compacto com subabas, sem rolagem lateral */
+html,body{max-width:100%;overflow-x:hidden}
+#tab-voters{max-width:1380px;margin:0 auto}
+#tab-voters .toolbar{margin-bottom:11px!important;padding-bottom:10px!important}
+#tab-voters .voterSubnav{display:flex;gap:7px;align-items:center;margin:0 0 12px;flex-wrap:wrap}
+#tab-voters .voterSubtab{display:flex;align-items:center;gap:7px;min-height:39px;padding:9px 14px;background:#fff;color:#536a8c;border:1px solid #dfe7f2;border-radius:11px;font-size:12px;box-shadow:0 3px 10px #17396909}
+#tab-voters .voterSubtab.active{background:linear-gradient(115deg,color-mix(in srgb,var(--brand) 14%,white),color-mix(in srgb,var(--brand2) 15%,white));border-color:color-mix(in srgb,var(--brand) 40%,#e2eaf5);color:var(--brand);font-weight:850}
+#tab-voters .voterWorkspace{padding:14px 18px!important;min-height:0}
+#tab-voters [data-voter-panel][hidden],#classCreatePopup[hidden]{display:none!important}
+#tab-voters .voterStudents{display:flex;flex-direction:column;min-height:0}
+#tab-voters .voterSummary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 12px}
+#tab-voters .voterMini{padding:10px 15px!important;min-height:64px!important;border-radius:12px!important}
+#tab-voters .voterMini small{font-size:10px!important}#tab-voters .voterMini b{font-size:23px!important}
+#tab-voters .voterTools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:0 0 10px}
+#tab-voters .searchBox{flex:1 1 260px;min-width:0}
+#tab-voters .importBox{display:flex;flex-wrap:wrap;gap:7px}
+#tab-voters .roomTabs{max-height:72px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+#tab-voters #voters{min-height:180px;max-height:min(48vh,490px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b8c8e0 #f4f7fc}
+#tab-voters .voterRow{padding:10px 12px!important;margin:0 0 6px!important;min-height:62px!important;border-radius:11px!important}
+#tab-voters .voterRowActions{gap:5px}
+#tab-voters .voterRowActions button{padding:7px 9px!important;font-size:10px!important}
+#tab-voters .classAdminPanel{margin:0!important;padding:12px 15px!important;background:transparent!important;border:0!important;box-shadow:none!important}
+#tab-voters .classAdminHead{margin:0 0 10px}
+#tab-voters .classAdminHead h3{font-size:17px!important;margin:0 0 3px}
+#tab-voters .classAdminHead p{font-size:11px!important;margin:0}
+#tab-voters .classCreateActions{margin:10px 0}
+#tab-voters .classAdminList{max-height:min(55vh,540px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#b8c8e0 #f4f7fc}
+#tab-voters .classReleaseFooter{margin-top:9px!important;padding:10px!important;border-radius:12px!important}
+#tab-voters .voterReports{display:flex;flex-direction:column;gap:12px;max-height:min(72vh,700px);overflow-y:auto;overscroll-behavior:contain}
+#tab-voters .exportRow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;padding:12px;background:#f7faff;border:1px solid #e2eaf5;border-radius:14px}
+#tab-voters .exportRow button{min-width:0!important;white-space:normal;font-size:11px!important}
+#tab-voters .adminMiniModal{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;background:#08193894;backdrop-filter:blur(7px);padding:16px}
+#tab-voters .adminMiniDialog{width:min(560px,100%);max-height:90dvh;overflow-y:auto;background:linear-gradient(145deg,#fff,#f5f9ff);border:1px solid #fff;border-radius:19px;padding:22px;box-shadow:0 24px 65px #0b244e44}
+#tab-voters .adminMiniTitle{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 15px}
+#tab-voters .adminMiniTitle strong{font-size:18px;color:#1c376b}
+#tab-voters .adminMiniDialog .classCreateGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#tab-voters .adminMiniDialog .classCreateGrid label{min-width:0}
+#tab-voters .adminMiniDialog .classCreateGrid button{align-self:end;min-height:42px}
+#tab-voters .classModeHint{font-size:11px!important}
+@media(min-height:650px){#tab-voters .voterWorkspace{max-height:calc(100dvh - 170px);overflow:hidden}#tab-voters .voterStudents,#tab-voters .classAdminPanel{max-height:calc(100dvh - 215px);overflow:hidden}#tab-voters #voters,#tab-voters .classAdminList{max-height:calc(100dvh - 410px)}}
+@media(max-width:740px){#tab-voters .voterWorkspace{padding:10px!important}#tab-voters .voterSubtab{padding:8px 10px}#tab-voters .voterMini{padding:8px!important}#tab-voters .voterMini b{font-size:19px!important}#tab-voters .exportRow{grid-template-columns:repeat(2,minmax(0,1fr))}#tab-voters .voterTools{gap:6px}#tab-voters .classAdminPanel{padding:5px!important}#tab-voters .adminMiniDialog .classCreateGrid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){#tab-voters .voterSubtab{transition:none!important}}
+/* v194 — urnas em carrossel e eleitores sem controles cortados */
+#tab-urnas .urnaCarouselHeader{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;color:#183866;font-size:13px;font-weight:850}
+#tab-urnas .urnaCarouselControls{display:flex;align-items:center;gap:8px}
+#tab-urnas .urnaCarouselControls button{display:grid;place-items:center;width:38px;height:38px;min-width:38px;padding:0!important;font-size:26px!important;line-height:1;border-radius:12px!important;background:linear-gradient(120deg,var(--brand),color-mix(in srgb,var(--brand) 75%,var(--brand2)))!important;color:#fff!important}
+#tab-urnas .urnaCarouselControls button:disabled{opacity:.3;cursor:default}
+#tab-urnas #urnaCarouselPosition{min-width:48px;text-align:center;color:#607696;font-size:12px;font-variant-numeric:tabular-nums}
+#tab-urnas #urnasList.urnaCards{display:flex!important;flex-wrap:nowrap!important;gap:12px!important;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;padding:5px 3px 14px;margin-top:8px!important}
+#tab-urnas #urnasList::-webkit-scrollbar{display:none}
+#tab-urnas #urnasList>.urnaCard{flex:0 0 calc((100% - 24px)/3);min-width:0;scroll-snap-align:start;min-height:255px}
+#tab-urnas .urnaCard:hover{translate:0 -2px}
+#tab-urnas .urnaOverview{margin-bottom:10px!important}
+#tab-urnas>.voterPanel{padding:14px 17px!important}
+#tab-urnas .urnaCard .urnaActions{padding-top:9px!important}
+#tab-voters .roomTabs{display:flex!important;align-items:center;gap:12px;max-height:none!important;overflow:visible!important;flex-wrap:nowrap!important;margin:0 0 10px!important}
+#tab-voters .roomPickerLabel{flex:0 0 auto;font-size:12px;font-weight:800;color:#536b8c}
+#tab-voters #roomPicker{flex:1 1 0;min-width:0;width:100%;max-width:460px;height:42px;padding:9px 12px;background:#fff!important;border:1px solid #d5e2f2!important;border-radius:11px!important;font-size:12px}
+#tab-voters .voterStudents{height:100%;min-height:0}
+#tab-voters #voters{flex:1 1 auto;max-height:none!important;min-height:80px;overflow-y:auto!important}
+#tab-voters .voterWorkspace{height:calc(100dvh - 200px);max-height:none!important;overflow:hidden}
+#tab-voters .voterStudents,#tab-voters .classAdminPanel,#tab-voters .voterReports{max-height:100%!important;height:100%;min-height:0;overflow:hidden}
+#tab-voters .classAdminPanel{display:flex;flex-direction:column}
+#tab-voters .classAdminList{flex:1 1 auto;max-height:none!important;min-height:0;overflow-y:auto!important}
+#tab-voters .voterReports{overflow-y:auto!important}
+#tab-voters .voterSubnav{margin-bottom:8px!important}
+#tab-voters .voterSubtab{min-height:35px;padding:7px 12px}
+#tab-voters .voterSummary{margin-bottom:8px!important}
+#tab-voters .voterMini{min-height:55px!important}
+#tab-voters .voterTools{margin-bottom:7px!important}
+#tab-voters .sectionLabel{margin:4px 0 5px!important}
+#tab-voters .voterRow{min-height:54px!important;padding:8px 11px!important}
+@media(max-width:1000px){#tab-urnas #urnasList>.urnaCard{flex-basis:calc((100% - 12px)/2)}}
+@media(max-width:670px){#tab-urnas #urnasList>.urnaCard{flex-basis:100%}#tab-voters .voterWorkspace{height:calc(100dvh - 175px)}#tab-voters .roomTabs{flex-wrap:wrap!important;gap:5px}#tab-voters .roomPickerLabel{font-size:11px}#tab-voters #roomPicker{max-width:none}#tab-voters .voterSummary{gap:5px}#tab-voters .voterTools{gap:5px}#tab-voters .voterSubnav{gap:5px}#tab-voters .voterSubtab{font-size:11px}}
+@media(prefers-reduced-motion:reduce){#tab-urnas #urnasList.urnaCards{scroll-behavior:auto}}
+/* v198: chapas em carrossel; corrigir abas de turmas recortadas */
+#tab-candidates .candidateCarouselHeader{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0 6px;font-size:13px;color:var(--brand)}
+#tab-candidates .candidateCarouselControls{display:flex;align-items:center;gap:8px}
+#tab-candidates .candidateCarouselControls button{width:38px;height:38px;min-width:38px;margin:0;padding:0!important;display:grid;place-items:center;background:linear-gradient(120deg,var(--brand),#3466ad)!important;color:#fff!important;border-radius:11px!important;font-size:25px!important}
+#tab-candidates .candidateCarouselControls button:disabled{opacity:.35}
+#tab-candidates #candidateCarouselPosition{font-size:12px;min-width:46px;text-align:center;color:#607696}
+#tab-candidates #candidates.candidateCards{display:flex!important;flex-wrap:nowrap!important;gap:12px!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:5px 2px 14px}
+#tab-candidates #candidates::-webkit-scrollbar{display:none}
+#tab-candidates #candidates>.candidateCard{flex:0 0 calc((100% - 24px)/3);min-width:0;scroll-snap-align:start;align-self:stretch;overflow-wrap:anywhere}
+#tab-voters [data-voter-panel][hidden],#tab-home .homeDetailsModal[hidden],#tab-home .quickActions[hidden],#classCreatePopup[hidden]{display:none!important}
+#tab-voters .voterWorkspace{height:auto!important;max-height:none!important;overflow:visible!important;min-height:0}
+#tab-voters .classAdminPanel[data-voter-panel="classes"]{height:auto!important;max-height:none!important;overflow:visible!important;display:flex;flex-direction:column}
+#tab-voters .classAdminList{height:auto!important;min-height:150px!important;max-height:55vh!important;overflow-y:auto!important;overflow-x:hidden!important;flex:0 1 auto!important;align-content:start;scrollbar-width:thin}
+#tab-voters .classAdminRow{min-width:0}
+#tab-voters .classAdminActions{flex-wrap:wrap;justify-content:flex-end;min-width:0}
+#tab-voters .classReleaseFooter{flex:0 0 auto;position:relative;background:#f8faff;z-index:1}
+#tab-voters .adminMiniModal:not([hidden]){position:fixed!important;inset:0!important;z-index:3000!important;display:grid!important;place-items:center!important;overflow:auto!important}
+@media(max-width:1050px){#tab-candidates #candidates>.candidateCard{flex-basis:calc((100% - 12px)/2)}#tab-voters .classAdminList{grid-template-columns:1fr!important}}
+@media(max-width:650px){#tab-candidates #candidates>.candidateCard{flex-basis:100%}#tab-voters .classAdminList{max-height:52vh!important}}
+/* v200 — cadastro de aluno em modal centralizado */
+#voterForm.voterAddOverlay[hidden]{display:none!important}
+#voterForm.voterAddOverlay:not([hidden]){position:fixed!important;inset:0!important;z-index:9999!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:16px!important;margin:0!important;background:#081b42a6!important;backdrop-filter:blur(6px);overflow-y:auto!important}
+#voterForm .voterAddDialog{width:min(570px,100%);max-height:calc(100dvh - 32px);overflow-y:auto;background:#fff;border:1px solid #e1e9f5;border-radius:22px;box-shadow:0 30px 90px #061a4566;animation:voterAddAppear .22s ease-out}
+@keyframes voterAddAppear{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+#voterForm .voterAddHeader{display:flex;align-items:center;gap:13px;padding:22px 23px 17px;background:linear-gradient(120deg,#f1f6ff,#fff9e8);border-bottom:1px solid #e7edf6;position:relative}
+#voterForm .voterAddIcon{display:grid;place-items:center;width:49px;height:49px;flex:0 0 49px;background:#e2ecff;border-radius:15px;font-size:25px}
+#voterForm .voterAddHeader h3{margin:3px 0 4px;font-size:20px;color:#163773}
+#voterForm .voterAddHeader p{margin:0;font-size:11px;color:#62738f}
+#voterForm .voterAddClose{align-self:flex-start;margin:0 0 0 auto!important;flex:0 0 32px;width:32px;height:32px;padding:0!important;background:#fff!important;color:#526a89!important;border:1px solid #d9e4f2!important;border-radius:10px!important}
+#voterForm .voterAddBody{padding:21px 23px 12px;display:flex;flex-direction:column;gap:13px}
+#voterForm .voterAddBody>label,#voterForm .voterAddGrid>label{display:block;font-size:12px;font-weight:800;color:#334b6f}
+#voterForm .voterAddBody input:not([type=checkbox]){display:block;width:100%;min-height:44px;margin:7px 0 0!important;padding:10px 13px;font-size:13px;background:#f9fbff;border:1px solid #d6e1f1;border-radius:11px}
+#voterForm .voterAddGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#voterForm .voterAddToggle{margin:4px 0 0!important;padding:13px!important;border:1px solid #dfe8f5;border-radius:12px;background:#f6f9ff}
+#voterForm .voterAddToggle input{width:auto!important;min-height:0!important}
+#voterForm .voterAddFooter{display:flex;justify-content:flex-end;gap:9px;padding:13px 23px 21px}
+#voterForm .voterAddFooter button{min-height:41px;margin:0!important;padding:10px 18px!important}
+@media(max-width:540px){#voterForm .voterAddHeader{padding:15px}#voterForm .voterAddBody{padding:16px}#voterForm .voterAddGrid{grid-template-columns:1fr}#voterForm .voterAddFooter{padding:12px 16px 16px}}
+/* v201 — segmentos em janelas próprias e alunos paginados */
+#voterForm.voterAddOverlay:not([hidden]){background:#071b3994!important;backdrop-filter:blur(3px)!important}
+#tab-voters .voterStudents{height:auto!important;min-height:0;max-height:none!important;overflow:visible!important}
+#tab-voters .voterList{height:auto!important;max-height:calc(100dvh - 360px)!important;min-height:170px;overflow-y:auto!important}
+#tab-voters .voterPagination{position:sticky;bottom:0;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:#f4f7fc;border-top:1px solid #dce6f2;font-size:11px;color:#526a88;font-weight:750}
+#tab-voters .voterPagination button{margin:0 2px!important;padding:7px 10px!important;font-size:11px!important;min-height:31px!important}
+#tab-voters .segmentChooser{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px;margin:12px 0 16px}
+#tab-voters .segmentCard{display:flex;flex-direction:column;align-items:flex-start;text-align:left;gap:6px;margin:0!important;padding:20px!important;min-height:184px;color:#17366f!important;background:linear-gradient(145deg,#fff,#f0f5ff)!important;border:1px solid #dbe5f5!important;border-radius:17px!important;box-shadow:0 6px 22px #0d347b10!important}
+#tab-voters .segmentCard:hover{border-color:#7ba5e8!important;transform:translateY(-2px)}
+#tab-voters .segmentIcon{display:grid;place-items:center;width:40px;height:40px;background:#e2ebff;border-radius:12px;font-size:23px}
+#tab-voters .segmentCard strong{font-size:16px}
+#tab-voters .segmentCard small{font-size:11px;color:#697b95}
+#tab-voters .segmentCount{font-size:11px;font-weight:850;color:#335785}
+#tab-voters .segmentArrow{margin-top:auto;font-size:12px;font-weight:850;color:#2361b0}
+#tab-voters #classAdminList{display:none!important}
+#segmentModal.segmentOverlay[hidden]{display:none!important}
+#segmentModal.segmentOverlay:not([hidden]){position:fixed!important;inset:0!important;z-index:9999!important;display:flex!important;align-items:center;justify-content:center;padding:16px;background:#091d438c;backdrop-filter:blur(4px)}
+#segmentModal .segmentDialog{display:flex;flex-direction:column;width:min(1030px,100%);height:min(750px,92dvh);min-height:0;overflow:hidden;background:#f8faff;border:1px solid #dfe7f5;border-radius:20px;box-shadow:0 28px 80px #061a4555}
+#segmentModal .segmentModalHead{flex:0 0 auto;display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 22px;background:linear-gradient(120deg,#e9f1ff,#fff9e9);border-bottom:1px solid #e0e7f3}
+#segmentModal .segmentModalHead h3{margin:4px 0;font-size:22px;color:#183d82}
+#segmentModal .segmentModalHead p{margin:0;font-size:12px;color:#61718a}
+#segmentModal .segmentModalContent{flex:1 1 0;min-height:0;overflow-y:auto;padding:18px 22px}
+#segmentModal .classStageGroup{margin:0!important;background:transparent!important}
+#segmentModal .classStageItems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#segmentModal .classAdminRow{min-width:0;flex-wrap:wrap;background:#fff;border:1px solid #dfe7f3;border-radius:12px}
+#segmentModal .classAdminActions{margin-left:auto;flex-wrap:wrap}
+#segmentModal .segmentModalFooter{flex:0 0 auto;display:flex;justify-content:flex-end;gap:8px;padding:12px 20px;border-top:1px solid #e2eaf5;background:#fff}
+#segmentModal .segmentModalFooter button{margin:0!important}
+@media(max-width:750px){#tab-voters .segmentChooser{grid-template-columns:1fr}#tab-voters .segmentCard{min-height:125px}#segmentModal .classStageItems{grid-template-columns:1fr}#segmentModal .segmentModalHead{padding:12px}#segmentModal .segmentModalContent{padding:12px}#segmentModal .segmentModalFooter{flex-wrap:wrap}}
+/* v202 — cartões compactos de segmentos e seleção guiada de turma */
+#tab-voters .segmentChooser{gap:9px!important;margin:7px 0 10px!important}
+#tab-voters .segmentCard{min-height:94px!important;padding:11px 13px!important;display:grid!important;grid-template-columns:32px minmax(0,1fr) auto;grid-template-rows:repeat(3,auto);column-gap:10px;row-gap:2px!important;align-content:center}
+#tab-voters .segmentIcon{grid-column:1;grid-row:1/4;width:32px!important;height:32px!important;font-size:18px!important;border-radius:9px!important}
+#tab-voters .segmentCard strong{grid-column:2;grid-row:1;font-size:13px!important}
+#tab-voters .segmentCard small{grid-column:2;grid-row:2;font-size:10px!important}
+#tab-voters .segmentCount{grid-column:2;grid-row:3;font-size:10px!important}
+#tab-voters .segmentArrow{grid-column:3;grid-row:1/4;align-self:center;margin:0!important;font-size:11px!important;white-space:nowrap}
+#tab-voters .classAdminHead{margin-bottom:7px!important}
+#tab-voters .classAdminHead h3{font-size:16px!important}
+#tab-voters .classAdminHead p{font-size:10px!important}
+#tab-voters .classCreateActions{margin:0 0 5px!important}
+#tab-voters .classModeHint{margin:5px 0!important;padding:7px 9px!important;font-size:10px!important}
+#tab-voters .classReleaseFooter{padding:8px 0 0!important;font-size:11px!important}
+#voterForm .voterAddBody select{display:block;width:100%;height:44px;min-height:44px;margin:7px 0 0!important;padding:9px 12px!important;background:#f9fbff;border:1px solid #d6e1f1;border-radius:11px;font-size:13px;color:#203b65}
+#voterForm .voterAddBody select:disabled{opacity:.65}
+@media(max-width:750px){#tab-voters .segmentCard{min-height:80px!important}#tab-voters .segmentChooser{gap:7px!important}}
+/* v203 — compactar APENAS turmas dentro do pop-up; restaurar cartões dos segmentos */
+#tab-voters .segmentChooser{gap:13px!important;margin:12px 0 16px!important}
+#tab-voters .segmentCard{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:6px!important;min-height:184px!important;padding:20px!important}
+#tab-voters .segmentIcon{display:grid!important;place-items:center!important;width:40px!important;height:40px!important;font-size:23px!important;border-radius:12px!important}
+#tab-voters .segmentCard strong{font-size:16px!important}
+#tab-voters .segmentCard small{font-size:11px!important}
+#tab-voters .segmentCount{font-size:11px!important}
+#tab-voters .segmentArrow{margin-top:auto!important;font-size:12px!important}
+#segmentModal .segmentModalContent{padding:12px 16px!important}
+#segmentModal .classStageGroup>header{padding:7px 10px!important;margin-bottom:8px!important}
+#segmentModal .classStageItems{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:7px!important}
+#segmentModal .classAdminRow{display:grid!important;grid-template-columns:auto minmax(0,1fr) auto;align-items:center!important;gap:7px!important;padding:9px 10px!important;min-height:65px!important;border-radius:10px!important}
+#segmentModal .multiClassCheck{display:flex!important;align-items:center;gap:3px!important;font-size:9px!important}
+#segmentModal .multiClassCheck input{width:15px!important;height:15px!important;min-height:0!important;margin:0!important}
+#segmentModal .classAdminMeta strong{font-size:12px!important}
+#segmentModal .classAdminMeta small{font-size:10px!important;margin-top:2px!important}
+#segmentModal .classState{font-size:9px!important;padding:3px 6px!important;margin-top:3px!important}
+#segmentModal .classAdminActions{display:flex!important;align-items:center!important;gap:4px!important;margin:0!important;flex-wrap:nowrap!important}
+#segmentModal .classAdminActions button{font-size:9px!important;padding:6px 7px!important;min-height:29px!important;margin:0!important;white-space:nowrap}
+#segmentModal .multiClassToolbar{padding:8px 10px!important;margin-bottom:8px!important}
+#segmentModal .segmentModalHead{padding:12px 18px!important}
+#segmentModal .segmentModalHead h3{font-size:19px!important}
+#segmentModal .segmentModalFooter{padding:9px 16px!important}
+@media(max-width:850px){#segmentModal .classStageItems{grid-template-columns:1fr!important}#segmentModal .classAdminRow{grid-template-columns:auto minmax(0,1fr);gap:6px!important}#segmentModal .classAdminActions{grid-column:1/-1;justify-content:flex-end}}
+@media(max-width:750px){#tab-voters .segmentCard{min-height:125px!important}}
+/* v204 — visual dos segmentos, turmas e controles globais */
+#tab-voters .segmentChooser{gap:15px!important;align-items:stretch}
+#tab-voters .segmentCard{align-items:center!important;text-align:center!important;justify-content:center!important;gap:7px!important;min-height:180px!important;border-radius:19px!important;padding:20px 15px!important;box-shadow:0 8px 25px #103e8412!important;transition:transform .18s,box-shadow .18s}
+#tab-voters .segmentCard:nth-child(1){background:linear-gradient(145deg,#f3fff7,#e9f8ff)!important;border-color:#c9eadd!important}
+#tab-voters .segmentCard:nth-child(2){background:linear-gradient(145deg,#eef5ff,#f4f0ff)!important;border-color:#d7defc!important}
+#tab-voters .segmentCard:nth-child(3){background:linear-gradient(145deg,#fff8e9,#fff0f4)!important;border-color:#f3dfc5!important}
+#tab-voters .segmentCard:hover{box-shadow:0 14px 30px #103e8425!important;transform:translateY(-3px)}
+#tab-voters .segmentIcon{width:45px!important;height:45px!important;font-size:25px!important;border-radius:14px!important;margin:0 auto!important}
+#tab-voters .segmentCard strong{font-size:17px!important}
+#tab-voters .segmentCard small{font-size:11px!important}
+#tab-voters .segmentCount{background:#ffffffbb;border:1px solid #ffffffc9;border-radius:30px;padding:5px 12px;font-size:11px!important}
+#tab-voters .segmentArrow{margin:3px auto 0!important;color:#245fae!important;font-size:12px!important}
+#segmentModal .segmentDialog{background:#f4f7ff!important;border-radius:22px!important}
+#segmentModal .segmentModalHead{background:linear-gradient(110deg,#e8efff,#f7edff,#fff8e8)!important;border-bottom:1px solid #dce6f8!important}
+#segmentModal .segmentModalContent{background:linear-gradient(145deg,#f4f8ff,#f9f6ff)!important}
+#segmentModal .classStageGroup>header{background:#ffffffd9!important;border-radius:11px!important;border:1px solid #e1e9f8!important}
+#segmentModal .classAdminRow{background:#fff!important;border:1px solid #dbe5f4!important;box-shadow:0 3px 11px #14336a0b!important;transition:border-color .15s,transform .15s}
+#segmentModal .classAdminRow:hover{border-color:#9bb8eb!important;transform:translateY(-1px)}
+#segmentModal .classAdminRow.active{background:#effdf6!important;border-color:#91dfb8!important}
+#segmentModal .classAdminMeta strong{color:#193b78!important}
+#segmentModal .classAdminActions button{border-radius:9px!important}
+#segmentModal .classAdminActions .releaseActive{background:#e6f9ed!important;color:#08743f!important;border:1px solid #b3e8c9!important}
+#segmentModal .classAdminActions .removeClassBtn{background:#fff0f3!important;color:#a83a55!important;border:1px solid #f6cfda!important}
+#segmentModal .segmentModalFooter{background:#fff!important}
+#tab-voters .classReleaseFooter{display:flex!important;justify-content:space-between!important;align-items:center!important;gap:12px!important;padding:12px 0 0!important}
+#tab-voters .classGlobalActions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+#tab-voters .classGlobalActions button{font-size:10px!important;padding:9px 12px!important;margin:0!important;border-radius:10px!important}
+#tab-voters .classGlobalActions .danger{background:#fff0f1!important;border:1px solid #f4c9d0!important;color:#aa2545!important}
+@media(max-width:700px){#tab-voters .segmentCard{min-height:130px!important}#tab-voters .classReleaseFooter{align-items:stretch!important;flex-direction:column!important}#tab-voters .classGlobalActions{justify-content:stretch}#tab-voters .classGlobalActions button{flex:1}}
+/* v205 — checkbox limpo e lista de alunos com rolagem própria */
+#segmentModal .multiClassCheck{display:flex!important;align-items:center!important;justify-content:center!important;width:24px!important;min-width:24px!important;margin:0!important;padding:0!important}
+#segmentModal .multiClassCheck input{width:17px!important;height:17px!important;margin:0!important;cursor:pointer;accent-color:#2768c8}
+#tab-voters .voterStudents[data-voter-panel="students"]{display:flex;flex-direction:column;min-height:0!important;height:auto!important;max-height:calc(100dvh - 225px)!important;overflow:hidden!important}
+#tab-voters .voterStudents .voterSummary,#tab-voters .voterStudents .voterTools,#tab-voters .voterStudents .roomTabs{flex:0 0 auto}
+#tab-voters #voters.voterList{flex:1 1 auto!important;min-height:150px!important;height:auto!important;max-height:none!important;overflow-y:auto!important;overflow-x:hidden!important;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#a5badb #eef3fb;padding:4px 6px 8px 2px}
+#tab-voters .voterStudents .voterPagination{position:sticky;bottom:0;z-index:3}
+@media(max-height:700px){#tab-voters .voterStudents[data-voter-panel="students"]{max-height:calc(100dvh - 185px)!important}}
+@media(max-width:700px){#tab-voters .voterStudents[data-voter-panel="students"]{max-height:calc(100dvh - 190px)!important}}
+/* v206 — central moderna de ações e apuração durante votação */
+#tab-election [hidden],#tab-results [hidden]{display:none!important}
+#tab-election .settingsPage[data-settings-page="controls"]{max-height:none!important;overflow:visible!important}
+#tab-election .actionHubIntro{display:flex;align-items:center;gap:13px;padding:18px;background:linear-gradient(110deg,#eaf2ff,#f5f0ff,#fff7e8);border:1px solid #dbe5f6;border-radius:17px;margin:12px 0 17px}
+#tab-election .actionHubIcon{display:grid;place-items:center;width:52px;height:52px;flex:0 0 52px;background:#fff;border-radius:14px;font-size:27px;box-shadow:0 4px 12px #1c438b15}
+#tab-election .actionHubIntro h3{font-size:19px;color:#163a7b;margin:0 0 4px}
+#tab-election .actionHubIntro p{font-size:12px;color:#637793;margin:0}
+#tab-election .actionHubGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+#tab-election .actionHubSection{min-width:0;padding:17px;background:#fff;border:1px solid #dfe8f5;border-radius:17px;box-shadow:0 7px 22px #143e8110}
+#tab-election .actionHubSection>h3{font-size:15px;color:#183b7a;margin:0 0 15px;padding-bottom:10px;border-bottom:1px solid #e6edf7}
+#tab-election .actionHubSection button{min-height:37px;margin:3px!important;padding:9px 12px!important;border-radius:10px!important;font-size:11px!important;white-space:normal}
+#tab-election #actionHubVoting .adminControlHead{display:flex;flex-direction:column;align-items:stretch;gap:9px;background:#f5f9ff;padding:12px;border-radius:12px}
+#tab-election #actionHubVoting .adminControlButtons{display:flex;flex-wrap:wrap;gap:7px}
+#tab-election #actionHubVoting .demoControl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:12px;background:#f8faff;border-radius:12px;margin:10px 0}
+#tab-election #actionHubClasses .classReleaseFooter{display:flex;flex-direction:column;align-items:stretch;gap:9px;border:0;padding:0;margin:0}
+#tab-election #actionHubClasses .classGlobalActions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start}
+#tab-election .actionHubDanger{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:15px;padding:13px;border-radius:13px;border:1px solid #f3d2d9;background:#fff6f7}
+#tab-election .actionHubDanger b{font-size:12px;color:#9a2841}
+#tab-election .actionHubDanger small{font-size:11px;color:#876571;line-height:1.5}
+#tab-election #actionHubReports .resultsActions{display:block;background:transparent;padding:0;border:0;box-shadow:none}
+#tab-election #actionHubReports .resultsActionButtons,#tab-election #actionHubMaintenance .adminDangerRow{display:flex;flex-wrap:wrap;gap:6px}
+#tab-election #actionHubMaintenance #archivePanel{margin-top:12px}
+#tab-results .resultLiveView{padding:23px;border:1px solid #dce7fa;border-radius:19px;background:linear-gradient(130deg,#eef5ff,#f8fbff 55%,#fff9e8);box-shadow:0 9px 25px #143e8110}
+#tab-results .resultLiveHead{text-align:center;margin-bottom:22px}
+#tab-results .resultLivePulse{display:inline-block;padding:6px 12px;background:#e6f9ee;border:1px solid #bce8ce;color:#137b49;border-radius:40px;font-size:10px;font-weight:900;letter-spacing:.7px}
+#tab-results .resultLiveHead h3{font-size:24px;color:#163b80;margin:10px 0 6px}
+#tab-results .resultLiveHead p{font-size:12px;color:#627997;max-width:560px;margin:0 auto;line-height:1.6}
+#tab-results .resultLiveMetrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+#tab-results .resultLiveMetric{background:#fff;border:1px solid #e0e9f6;border-radius:14px;padding:17px;text-align:center}
+#tab-results .resultLiveMetric small{display:block;font-size:11px;color:#647995;font-weight:700}
+#tab-results .resultLiveMetric strong{display:block;font-size:27px;color:#174588;margin-top:7px}
+#tab-results .resultLiveProgress{height:11px;background:#dfe9f7;border-radius:50px;margin:19px 0 10px;overflow:hidden}
+#tab-results .resultLiveProgress>div{height:100%;width:0;background:linear-gradient(90deg,#2466cf,#28b88f);border-radius:50px;transition:width .4s}
+#tab-results #resultLiveTime{text-align:center;font-size:11px}
+@media(max-width:900px){#tab-election .actionHubGrid{grid-template-columns:1fr}#tab-results .resultLiveMetrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){#tab-results .resultLiveMetrics{grid-template-columns:1fr 1fr}#tab-results .resultLiveMetric{padding:11px}#tab-results .resultLiveMetric strong{font-size:21px}}
+/* v207 — menu de ações em quatro cartões, conteúdo apenas em pop-ups */
+#tab-election .actionHubGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:13px!important}
+#tab-election .actionHubGrid>[data-hub-content]{display:none!important}
+#tab-election .actionHubGrid>button.actionHubSection{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-align:center!important;gap:9px!important;min-height:172px!important;padding:20px!important;border-radius:19px!important;cursor:pointer;background:linear-gradient(145deg,#f1f7ff,#fff)!important;color:#173b78!important;transition:transform .2s,box-shadow .2s}
+#tab-election .actionHubGrid>button.actionHubSection:nth-of-type(2){background:linear-gradient(145deg,#eefbf5,#fff)!important}
+#tab-election .actionHubGrid>button.actionHubSection:nth-of-type(3){background:linear-gradient(145deg,#f7f1ff,#fff)!important}
+#tab-election .actionHubGrid>button.actionHubSection:nth-of-type(4){background:linear-gradient(145deg,#fff7ec,#fff)!important}
+#tab-election .actionHubGrid>button.actionHubSection:hover{transform:translateY(-3px);box-shadow:0 12px 25px #153a801d!important}
+#tab-election .actionHubGrid .hubEmoji{display:grid;place-items:center;width:48px;height:48px;background:#ffffffd9;border-radius:14px;font-size:25px}
+#tab-election .actionHubGrid button.actionHubSection strong{font-size:16px}
+#tab-election .actionHubGrid button.actionHubSection small{font-size:11px;color:#637a98}
+#tab-election .actionHubGrid .hubOpen{font-size:11px;font-weight:900;color:#2368ba}
+#actionHubPopup[hidden]{display:none!important}
+#actionHubPopup:not([hidden]){position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:18px;background:#071a3c9c;backdrop-filter:blur(5px)}
+#actionHubPopup .actionHubDialog{width:min(730px,100%);max-height:min(790px,91dvh);min-height:0;display:flex;flex-direction:column;overflow:hidden;border-radius:22px;border:1px solid #dce6f7;background:#f7faff;box-shadow:0 30px 90px #06173970}
+#actionHubPopup .actionHubDialogHead{flex:0 0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:17px 21px;background:linear-gradient(110deg,#e9f2ff,#f6efff,#fff8ec);border-bottom:1px solid #dfe7f4}
+#actionHubPopup .actionHubDialogHead h3{font-size:20px;color:#163e80;margin:4px 0 0}
+#actionHubPopup .actionHubDialogBody{flex:1 1 auto;min-height:0;overflow-y:auto;padding:18px}
+#actionHubPopup .actionHubSection{display:block!important;background:#fff;border:1px solid #e0e9f7;border-radius:15px;padding:17px}
+#actionHubPopup .actionHubSection>h3{display:none}
+#actionHubPopup .actionHubSection button{margin:3px!important;padding:9px 12px!important;border-radius:10px!important;font-size:11px!important;min-height:37px}
+#actionHubPopup .adminControlHead{display:flex;flex-direction:column;align-items:stretch;gap:10px;padding:13px;border:1px solid #e3eaf6;border-radius:13px;background:#f4f8ff}
+#actionHubPopup .adminControlButtons,#actionHubPopup .classGlobalActions,#actionHubPopup .resultsActionButtons,#actionHubPopup .adminDangerRow{display:flex;flex-wrap:wrap;gap:8px}
+#actionHubPopup .demoControl{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-top:12px;padding:14px;border:1px solid #e3eaf6;border-radius:13px;background:#f8faff}
+#actionHubPopup .classReleaseFooter{display:flex;flex-direction:column;align-items:stretch;gap:10px}
+#actionHubPopup .actionHubDanger{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:14px;margin-top:14px;border:1px solid #f1d1da;border-radius:13px;background:#fff4f6}
+#actionHubPopup .actionHubDanger small{font-size:11px;color:#865c69;line-height:1.5}
+#actionHubPopup .actionHubDanger b{color:#a72d4c}
+#actionHubPopup .resultsActions{background:transparent!important;border:0!important;padding:0!important;box-shadow:none!important}
+#actionHubPopup #archivePanel{margin-top:12px}
+#tab-results .resultLiveVotes{margin-top:18px;padding:17px;background:#fff;border:1px solid #dfe8f6;border-radius:16px}
+#tab-results .resultLiveVotesHead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+#tab-results .resultLiveVotesHead h4{margin:0 0 3px;font-size:15px;color:#173b7b}
+#tab-results .resultLiveVotesHead small{font-size:11px;color:#75849b}
+#tab-results .resultLiveCandidate{padding:9px 0;border-bottom:1px solid #eef1f7}
+#tab-results .resultLiveCandidateTop{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:12px;color:#314a70}
+#tab-results .resultLiveCandidateTop strong{white-space:nowrap;color:#173b7b}
+#tab-results .resultLiveCandidateTop strong small{font-weight:600;color:#7789a2}
+#tab-results .resultLiveCandidateTrack{height:7px;margin-top:8px;border-radius:20px;background:#e9eff9;overflow:hidden}
+#tab-results .resultLiveCandidateTrack>div{height:100%;background:linear-gradient(90deg,#286bd4,#33b6a0);border-radius:20px;transition:width .35s}
+#tab-results #resultLiveOthers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:15px}
+#tab-results #resultLiveOthers>div{display:flex;align-items:center;justify-content:space-between;gap:7px;padding:12px;border-radius:11px;background:#f3f7ff;font-size:11px;color:#536989}
+#tab-results #resultLiveOthers strong{font-size:18px;color:#1c4486}
+@media(max-width:650px){#tab-election .actionHubGrid{grid-template-columns:1fr!important}#tab-election .actionHubGrid>button.actionHubSection{min-height:125px!important}#tab-results #resultLiveOthers{grid-template-columns:1fr}#actionHubPopup .actionHubDialogBody{padding:11px}}
+/* v208 — acabamento visual consistente nas demais páginas administrativas */
+#panel .tab:not([hidden]){border-radius:18px}
+#panel .toolbar{gap:12px}
+#panel .toolbar h2{letter-spacing:-.025em}
+#panel .box:not(.tab),#panel .dashCard{border-color:#e0e8f5;border-radius:16px}
+#panel input:focus,#panel select:focus,#panel textarea:focus{outline:none;box-shadow:0 0 0 3px #3675d71b;border-color:#5a8cde}
+#panel button:not(:disabled){transition:transform .15s,box-shadow .15s}
+#panel button:not(:disabled):hover{filter:brightness(1.035)}
+@media(prefers-reduced-motion:reduce){#panel button{transition:none!important}}
+/* v210 — gestão premium de credenciais dos mesários */
+#tab-mesarios .mesarioAdminTop{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:16px 18px;border-radius:17px;background:linear-gradient(110deg,#eaf2ff,#f5f0ff);border:1px solid #dce7f8;margin:16px 0}
+#tab-mesarios .mesarioAdminTop h3{font-size:17px;color:#173d7e;margin:0 0 5px}
+#tab-mesarios .mesarioAdminTop p{font-size:11px;color:#657b99;margin:0}
+#tab-mesarios .mesarioAdminTop button{white-space:nowrap;border-radius:11px;padding:12px 17px}
+#tab-mesarios .mesarioAccountsList{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-height:calc(100dvh - 330px);min-height:110px;overflow-y:auto;padding:3px}
+#tab-mesarios .mesarioAccountCard{display:grid;grid-template-columns:43px minmax(0,1fr);gap:11px;padding:15px;background:#fff;border:1px solid #dfe8f5;border-radius:16px;box-shadow:0 6px 19px #153a8110}
+#tab-mesarios .mesarioAccountAvatar{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:#e9f1ff;font-size:23px}
+#tab-mesarios .mesarioAccountInfo{display:flex;flex-direction:column;gap:5px;min-width:0}
+#tab-mesarios .mesarioAccountInfo strong{color:#173d7d;font-size:14px;overflow-wrap:anywhere}
+#tab-mesarios .mesarioAccountInfo small{font-size:11px;color:#7083a1}
+#tab-mesarios .mesarioAccountStatus{align-self:flex-start;font-size:10px;color:#a04c5e;background:#fff0f2;padding:4px 9px;border-radius:50px}
+#tab-mesarios .mesarioAccountStatus.isActive{color:#16805a;background:#e8f9ef}
+#tab-mesarios .mesarioAccountActions{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+#tab-mesarios .mesarioAccountActions button{border-radius:10px;font-size:11px;padding:9px 12px}
+#tab-mesarios .mesarioAccountEmpty{grid-column:1/-1;padding:35px;text-align:center;border:1px dashed #c6d7ef;border-radius:14px;color:#667e9d}
+#tab-mesarios .mesarioAdminNote{font-size:11px;line-height:1.5;color:#6a7f9e;padding:13px;margin-top:14px;background:#f5f8ff;border-radius:12px}
+#mesarioAccountModal[hidden]{display:none!important}
+#mesarioAccountModal:not([hidden]){position:fixed;inset:0;z-index:10010;display:flex;align-items:center;justify-content:center;background:#071839a3;backdrop-filter:blur(5px);padding:15px}
+#mesarioAccountModal .mesarioAccountDialog{width:min(510px,100%);max-height:90dvh;overflow:auto;background:#fff;border:1px solid #e1e9f7;border-radius:22px;box-shadow:0 30px 80px #06163c60}
+#mesarioAccountModal .mesarioAccountHeader{display:flex;align-items:center;justify-content:space-between;padding:19px 23px;background:linear-gradient(110deg,#e9f2ff,#f8f0ff);border-bottom:1px solid #e0e8f5}
+#mesarioAccountModal .mesarioAccountHeader small{font-size:10px;font-weight:800;letter-spacing:.1em;color:#6c84b0}
+#mesarioAccountModal .mesarioAccountHeader h3{margin:5px 0 0;font-size:20px;color:#183c7c}
+#mesarioAccountModal form{display:grid;gap:15px;padding:22px}
+#mesarioAccountModal label{display:flex;flex-direction:column;gap:7px;font-size:12px;font-weight:800;color:#3b547a}
+#mesarioAccountModal input{width:100%;height:44px;padding:11px;border:1px solid #cdddf1;border-radius:11px;background:#fbfdff}
+#mesarioAccountModal .mesarioAccountFooter{display:flex;justify-content:flex-end;gap:9px;margin-top:7px}
+@media(max-width:750px){#tab-mesarios .mesarioAccountsList{grid-template-columns:1fr;max-height:calc(100dvh - 350px)}#tab-mesarios .mesarioAdminTop{align-items:flex-start;flex-direction:column}}
+/* v221 — Central de ações independente do painel e pop-ups clicáveis */
+#actionHubPopup[hidden]{display:none!important;pointer-events:none!important}
+#actionHubPopup:not([hidden]){display:flex!important;position:fixed!important;inset:0!important;z-index:20000!important;align-items:center!important;justify-content:center!important;padding:16px!important;background:#071a3ca8!important;backdrop-filter:blur(5px)!important}
+#actionHubPopup .actionHubDialog{width:min(720px,calc(100vw - 24px))!important;max-height:calc(100dvh - 32px)!important;min-height:0!important;overflow:hidden!important;border-radius:20px!important;box-shadow:0 28px 75px #071a3c70!important}
+#actionHubPopup .actionHubDialogBody{overflow-y:auto!important;min-height:0!important;padding:16px!important}
+#actionHubPopup .actionHubDialogBody>[data-hub-content]{display:block!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important}
+#actionHubPopup .actionHubDialogHead button{flex:0 0 auto!important;cursor:pointer!important;pointer-events:auto!important}
+#tab-election .actionHubGrid>button.actionHubSection{pointer-events:auto!important;cursor:pointer!important}
