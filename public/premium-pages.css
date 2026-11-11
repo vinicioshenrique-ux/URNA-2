@@ -1,0 +1,27 @@
+/* v208 — identidade premium compartilhada. Nunca importada na tela de votação. */
+:root{--premium-blue:#173d83;--premium-indigo:#10185f;--premium-gold:#f7c843;--premium-mint:#15ad91;--premium-border:#dce6f5;--premium-shadow:0 12px 32px rgba(19,48,101,.12)}
+body.premium-mesario,body.premium-identificacao{font-family:Inter,"Segoe UI",Arial,sans-serif!important;color:#20365c;background:radial-gradient(ellipse at 0 0,#e5eeff 0,transparent 45%),radial-gradient(ellipse at 100% 100%,#fff1d9 0,transparent 40%),#f4f7fc!important}
+body.premium-mesario header,body.premium-identificacao header{background:linear-gradient(110deg,#080e59,#173b91)!important;box-shadow:0 8px 25px #07184b22}
+body.premium-mesario .card,body.premium-identificacao .card{background:#fff!important;border:1px solid var(--premium-border)!important;border-radius:21px!important;box-shadow:var(--premium-shadow)!important}
+body.premium-mesario .card h1,body.premium-mesario .card h2,body.premium-identificacao .card h1{color:var(--premium-blue);letter-spacing:-.025em}
+body.premium-mesario button,body.premium-identificacao button{border-radius:12px!important;transition:transform .15s,filter .15s,box-shadow .15s}
+body.premium-mesario button:not(:disabled):hover,body.premium-identificacao button:not(:disabled):hover{transform:translateY(-1px);filter:brightness(1.06);box-shadow:0 7px 17px #163a8622}
+body.premium-mesario input,body.premium-mesario select,body.premium-identificacao input,body.premium-identificacao select{border-radius:12px!important;border-color:#cbdaf0!important;background:#fbfdff!important;transition:border-color .15s,box-shadow .15s}
+body.premium-mesario input:focus,body.premium-mesario select:focus,body.premium-identificacao input:focus,body.premium-identificacao select:focus{outline:none!important;border-color:#4b84e6!important;box-shadow:0 0 0 3px #3976e621!important}
+body.premium-mesario .person,body.premium-mesario .ticket,body.premium-mesario .grid>.card{border-radius:13px!important}
+body.premium-identificacao .steps span{border-radius:999px!important;padding:8px 12px!important}
+body.premium-identificacao .steps .on{background:#e5efff!important;color:#18458e!important;border-color:#b9d1ff!important}
+body.premium-identificacao #setup,body.premium-identificacao #station{max-width:630px}
+body.premium-chamada{background:radial-gradient(circle at 80% 0,#244b9b 0,transparent 50%),linear-gradient(130deg,#070d4d,#142e7d)!important;font-family:Inter,"Segoe UI",Arial,sans-serif!important}
+body.premium-chamada main{max-width:1500px;padding:clamp(15px,2.5vw,35px)}
+body.premium-chamada header{border-bottom:1px solid #ffffff30;padding-bottom:17px}
+body.premium-chamada .card{background:linear-gradient(145deg,#ffffff1a,#ffffff0d)!important;border:1px solid #ffffff35!important;border-radius:23px!important;box-shadow:0 16px 38px #00000020;backdrop-filter:blur(9px)}
+body.premium-chamada .ticket{border:1px solid #ffffff23;border-radius:13px!important;background:#ffffff1c!important}
+body.premium-chamada .chip{border:1px solid #ffffff30;border-radius:999px}
+body.premium-projecao .stat,body.premium-projecao .card,body.premium-projecao .resultCard{border-radius:18px;box-shadow:0 10px 25px #173e7e0e}
+body.premium-projecao .live{border-radius:999px}
+body.premium-projecao .logoMark{border-radius:17px}
+body.premium-resultado .card{border-radius:30px!important;border-color:#ffffff80!important;box-shadow:0 36px 110px #0009!important}
+body.premium-resultado .metric{border-radius:15px!important}
+@media(max-width:700px){body.premium-mesario .card,body.premium-identificacao .card{border-radius:16px!important;padding:17px!important}body.premium-chamada .card{padding:16px!important}body.premium-resultado .card{border-radius:20px!important}}
+@media(prefers-reduced-motion:reduce){body.premium-mesario button,body.premium-identificacao button{transition:none!important}}
