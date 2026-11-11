@@ -1,0 +1,22 @@
+/* v225 — Central de Ações direta, sem pop-ups */
+#tab-election .acInlineCenter{width:100%!important;max-width:1180px!important;margin:0 auto!important;padding:5px 0 24px!important;overflow:visible!important;max-height:none!important}
+#tab-election .acInlineSections{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:15px!important;align-items:start!important}
+#tab-election .acInlineGroup{display:block!important;position:relative!important;min-width:0!important;padding:19px!important;background:#fff!important;border:1px solid #dfe8f5!important;border-radius:18px!important;box-shadow:0 5px 18px #183c710e!important;overflow:visible!important}
+#tab-election .acInlineHeading{display:flex!important;align-items:center!important;gap:10px!important;margin-bottom:12px!important}
+#tab-election .acInlineHeading h3{margin:0!important;font-size:16px!important;color:#173b79!important;font-weight:850!important}
+#tab-election .acInlineNumber{display:grid!important;place-items:center!important;width:33px!important;height:33px!important;flex:0 0 33px!important;border-radius:10px!important;background:#eaf2ff!important;color:#2261b1!important;font-size:12px!important;font-weight:900!important}
+#tab-election .acInlineGroup:nth-child(2) .acInlineNumber{background:#e6f8f0!important;color:#087657!important}
+#tab-election .acInlineGroup:nth-child(3) .acInlineNumber{background:#fff4e1!important;color:#a46a00!important}
+#tab-election .acInlineGroup:nth-child(4) .acInlineNumber{background:#f1eaff!important;color:#7950ba!important}
+#tab-election .acInlineGroup .acPaneLead{display:flex!important;flex-direction:column!important;gap:4px!important;padding:0 0 13px!important}
+#tab-election .acInlineGroup .acPaneLead strong{font-size:13px!important;color:#183e7b!important}
+#tab-election .acInlineGroup .acPaneLead small{font-size:11px!important;color:#7385a0!important;line-height:1.45!important}
+#tab-election .acInlineGroup .acToolGrid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}
+#tab-election .acInlineGroup .acTool{display:flex!important;align-items:center!important;justify-content:flex-start!important;text-align:left!important;white-space:normal!important;min-height:47px!important;width:100%!important;margin:0!important;padding:11px 12px!important;border-radius:11px!important;border:1px solid #dce7f7!important;background:#f4f8ff!important;color:#173e7c!important;font-size:11px!important;line-height:1.4!important;font-weight:800!important;cursor:pointer!important;box-shadow:none!important}
+#tab-election .acInlineGroup .acTool:hover{background:#e7f0ff!important;border-color:#aac7ef!important}
+#tab-election .acInlineGroup .acTool.acPositive{background:#e8f8f1!important;border-color:#bdebd6!important;color:#087657!important}
+#tab-election .acInlineGroup .acTool.acDanger{background:#fff0f1!important;border-color:#f3c9cf!important;color:#b42d46!important}
+#tab-election .acInlineGroup #archivePanel{margin-top:14px!important;max-height:430px!important;overflow:auto!important}
+#tab-election .acInlineCenter .acIntro{margin-bottom:16px!important}
+@media(max-width:960px){#tab-election .acInlineSections{grid-template-columns:1fr!important}}
+@media(max-width:520px){#tab-election .acInlineGroup{padding:14px!important}#tab-election .acInlineGroup .acToolGrid{grid-template-columns:1fr!important}}
