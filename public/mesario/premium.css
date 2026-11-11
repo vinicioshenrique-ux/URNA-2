@@ -704,3 +704,59 @@ body.premium-mesario #rosterPanel .rosterStageCard{min-height:104px!important;he
  body.premium-mesario #receptionPanel>.mesarioMoreDetails>summary{flex-wrap:wrap!important}
  body.premium-mesario #rosterPanel .rosterStageCards{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
+/* v229 — correção de sobreposição e limpeza do painel */
+body.premium-mesario,body.premium-mesario *{box-sizing:border-box}
+body.premium-mesario{overflow-x:hidden!important}
+body.premium-mesario>main{width:min(1100px,100%)!important;max-width:1100px!important;margin:20px auto!important;padding:0 18px 32px!important}
+body.premium-mesario #workspace{display:flex!important;flex-direction:column!important;gap:14px!important;width:100%!important;min-width:0!important}
+body.premium-mesario #workspace .mesarioNav{position:static!important;display:flex!important;align-self:flex-start!important;width:auto!important;max-width:100%!important;margin:0!important;padding:4px!important;gap:4px!important;flex-wrap:nowrap!important}
+body.premium-mesario #workspace .mesarioNav button{position:static!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-width:120px!important;width:auto!important;min-height:38px!important;height:auto!important;margin:0!important;padding:9px 15px!important;white-space:nowrap!important;line-height:1.25!important;transform:none!important}
+body.premium-mesario #receptionPanel:not(.hidden){display:flex!important;flex-direction:column!important;align-items:stretch!important;gap:12px!important;width:100%!important;min-width:0!important}
+body.premium-mesario #receptionPanel>.mesarioIntroCard{display:none!important}
+body.premium-mesario #receptionPanel>.mesarioReceptionCard{order:0!important;display:flex!important;justify-content:flex-end!important;align-items:center!important;width:100%!important;min-width:0!important;min-height:0!important;margin:0!important;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important}
+body.premium-mesario #receptionPanel>.mesarioReceptionCard .topline{display:flex!important;justify-content:flex-end!important;align-items:center!important;flex-wrap:nowrap!important;width:100%!important;gap:8px!important}
+body.premium-mesario #receptionPanel>.mesarioReceptionCard h1{display:none!important}
+body.premium-mesario #receptionPanel>.mesarioReceptionCard #logout{position:static!important;display:inline-flex!important;min-height:34px!important;width:auto!important;margin:0!important;padding:7px 14px!important;line-height:1.2!important;white-space:nowrap!important}
+body.premium-mesario #receptionPanel>.mesarioCentralCard{order:1!important}
+body.premium-mesario #receptionPanel>.mesarioFilaCard{order:2!important}
+body.premium-mesario #receptionPanel>.mesarioUrnasCard{order:3!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails{order:4!important}
+body.premium-mesario #receptionPanel>.card,
+body.premium-mesario #receptionPanel>.mesarioMoreDetails{position:relative!important;display:block!important;float:none!important;clear:both!important;width:100%!important;min-width:0!important;max-width:none!important;height:auto!important;min-height:0!important;max-height:none!important;margin:0!important;padding:17px 19px!important;overflow:visible!important;border:1px solid #e3e9f1!important;border-radius:12px!important;background:#fff!important;box-shadow:0 1px 5px #182b4508!important}
+body.premium-mesario #receptionPanel .topline{position:static!important;display:flex!important;align-items:center!important;justify-content:space-between!important;flex-wrap:wrap!important;gap:10px!important;width:100%!important;height:auto!important}
+body.premium-mesario #receptionPanel h2{position:static!important;display:block!important;width:auto!important;height:auto!important;margin:0 0 10px!important;padding:0!important;font-size:15px!important;line-height:1.35!important;white-space:normal!important;overflow:visible!important;overflow-wrap:anywhere!important;transform:none!important}
+body.premium-mesario #receptionPanel p{position:static!important;display:block!important;height:auto!important;margin:5px 0 10px!important;font-size:12px!important;line-height:1.5!important;white-space:normal!important;overflow-wrap:anywhere!important}
+body.premium-mesario #receptionPanel a{position:static!important;display:inline-flex!important;align-items:center!important;max-width:100%!important;height:auto!important;line-height:1.35!important;white-space:normal!important;overflow-wrap:anywhere!important;transform:none!important}
+body.premium-mesario #receptionPanel #queueOverview{position:static!important;display:block!important;width:100%!important;height:auto!important;min-height:0!important;margin:0 0 10px!important;padding:11px 13px!important;line-height:1.5!important;white-space:normal!important;overflow-wrap:anywhere!important}
+body.premium-mesario #receptionPanel #participationOverview{position:static!important;display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(190px,100%),1fr))!important;gap:8px!important;width:100%!important;height:auto!important;max-height:260px!important;overflow:auto!important}
+body.premium-mesario #receptionPanel #participationOverview>*{position:relative!important;display:block!important;min-width:0!important;width:auto!important;height:auto!important;margin:0!important;padding:10px!important;line-height:1.4!important;overflow-wrap:anywhere!important}
+body.premium-mesario #receptionPanel .mesarioCompactList{position:static!important;display:flex!important;flex-direction:column!important;gap:7px!important;width:100%!important;height:auto!important;max-height:230px!important;overflow:auto!important}
+body.premium-mesario #receptionPanel .mesarioCompactList>*{position:relative!important;display:block!important;min-width:0!important;width:100%!important;height:auto!important;min-height:0!important;margin:0!important;padding:10px 12px!important;line-height:1.45!important;white-space:normal!important;overflow-wrap:anywhere!important}
+body.premium-mesario #receptionPanel #urnas{position:static!important;display:flex!important;flex-direction:column!important;gap:7px!important;width:100%!important;height:auto!important;max-height:230px!important;overflow:auto!important}
+body.premium-mesario #receptionPanel #urnas>*{position:relative!important;display:block!important;min-width:0!important;width:100%!important;height:auto!important;margin:0!important;line-height:1.4!important;white-space:normal!important;overflow-wrap:anywhere!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails{padding:0!important;overflow:hidden!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails>summary{position:static!important;display:flex!important;align-items:center!important;justify-content:flex-start!important;flex-wrap:wrap!important;gap:7px 12px!important;width:100%!important;height:auto!important;min-height:44px!important;margin:0!important;padding:13px 16px!important;line-height:1.4!important;white-space:normal!important;cursor:pointer!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails>summary span{display:block!important;position:static!important;font-size:11px!important;line-height:1.4!important;white-space:normal!important}
+body.premium-mesario #receptionPanel .mesarioMoreGrid{position:static!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;width:100%!important;height:auto!important;padding:0 12px 12px!important}
+body.premium-mesario #receptionPanel .mesarioMoreGrid>.card{position:relative!important;display:block!important;min-width:0!important;width:auto!important;height:auto!important;margin:0!important;padding:13px!important;overflow:visible!important}
+body.premium-mesario #receptionPanel .mesarioMoreGrid .mesarioCompactList{max-height:180px!important}
+body.premium-mesario #rosterPanel:not(.hidden){position:relative!important;width:100%!important;max-width:none!important;height:auto!important;margin:0!important;padding:18px!important;overflow:visible!important}
+body.premium-mesario #rosterPanel *{max-width:100%}
+body.premium-mesario #rosterPanel h2,body.premium-mesario #rosterPanel p,body.premium-mesario #rosterPanel label,body.premium-mesario #rosterPanel small{position:static!important;display:block!important;height:auto!important;line-height:1.45!important;white-space:normal!important;overflow-wrap:anywhere!important}
+body.premium-mesario #rosterPanel .rosterSearchHero{position:relative!important;display:flex!important;align-items:center!important;gap:12px!important;height:auto!important;min-height:0!important;overflow:visible!important}
+body.premium-mesario #rosterPanel .rosterSearchHeroField{display:flex!important;align-items:center!important;gap:8px!important;flex-wrap:wrap!important;width:100%!important}
+body.premium-mesario #rosterPanel .rosterSearchHeroField input{flex:1 1 220px!important;min-width:0!important}
+body.premium-mesario #rosterPanel .rosterStageCards{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))!important;gap:10px!important;width:100%!important}
+body.premium-mesario #rosterPanel .rosterStageCard{position:relative!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;min-width:0!important;width:100%!important;height:auto!important;min-height:110px!important;padding:15px!important;overflow:visible!important;line-height:1.4!important}
+body.premium-mesario #rosterPanel .rosterStageCard *{position:static!important;display:block!important;height:auto!important;line-height:1.4!important;white-space:normal!important}
+@media(max-width:700px){
+ body.premium-mesario>header{position:relative!important;display:flex!important;flex-wrap:wrap!important;gap:9px!important}
+ body.premium-mesario>header .mesarioBrand{flex:1 1 180px!important;min-width:0!important}
+ body.premium-mesario>header .mesarioHeaderLinks{display:flex!important;flex:1 0 100%!important;width:100%!important;justify-content:stretch!important;gap:7px!important}
+ body.premium-mesario>header .mesarioHeaderLinks a{flex:1!important;justify-content:center!important}
+ body.premium-mesario>main{padding:0 11px 24px!important;margin:14px auto!important}
+ body.premium-mesario #receptionPanel .mesarioMoreGrid{grid-template-columns:minmax(0,1fr)!important}
+ body.premium-mesario #receptionPanel>.card,body.premium-mesario #receptionPanel>.mesarioMoreDetails{padding:14px!important}
+ body.premium-mesario #rosterPanel .rosterStageCards{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ body.premium-mesario #rosterPanel .rosterSearchHero{display:block!important}
+}
