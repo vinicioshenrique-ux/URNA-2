@@ -647,3 +647,60 @@ body.premium-mesario #login{margin:clamp(35px,9vh,100px) auto!important;padding:
 body.premium-mesario #login h1{font-size:23px!important}
 @media(max-width:850px){body.premium-mesario #receptionPanel:not(.hidden){grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;grid-template-areas:"intro intro" "reception reception" "central central" "urnas alerts" "fila last" "history history"!important}}
 @media(max-width:620px){body.premium-mesario>header{flex-wrap:wrap!important;gap:9px!important}body.premium-mesario>header .mesarioHeaderLinks{width:100%!important;margin:0!important}body.premium-mesario>header .mesarioHeaderLinks a{flex:1!important}body.premium-mesario>main{padding:14px 11px!important}body.premium-mesario #workspace .mesarioNav{width:100%!important}body.premium-mesario #workspace .mesarioNav .mesarioNavBtn{flex:1!important;padding:8px 10px!important}body.premium-mesario #workspace .mesarioNav .mesarioNavText{display:inline!important}body.premium-mesario #receptionPanel:not(.hidden){grid-template-columns:minmax(0,1fr)!important;grid-template-areas:"intro" "reception" "central" "urnas" "alerts" "fila" "last" "history"!important;gap:10px!important}body.premium-mesario #receptionPanel>.card{padding:15px!important}body.premium-mesario #receptionPanel>.mesarioIntroCard .topline{align-items:flex-start!important;flex-direction:column!important}body.premium-mesario #receptionPanel>.mesarioIntroCard a{width:100%!important}body.premium-mesario #rosterPanel:not(.hidden){padding:15px!important}body.premium-mesario #rosterPanel .rosterStageCards{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}body.premium-mesario #rosterPanel .rosterStageCard{min-height:100px!important;padding:8px 5px!important}body.premium-mesario #rosterPanel .rosterStageCard strong{font-size:11px!important}}
+/* v228 — painel enxuto: foco na operação, informações secundárias recolhidas */
+body.premium-mesario{background:#f5f7fb!important;color:#26364d!important}
+body.premium-mesario>header{min-height:58px!important;padding:9px 24px!important;background:#122b63!important;box-shadow:none!important}
+body.premium-mesario>header #mesarioSchoolLogo{width:34px!important;height:34px!important;object-fit:contain!important}
+body.premium-mesario>header .mesarioBrand strong{font-size:13px!important;letter-spacing:.04em!important}
+body.premium-mesario>header .mesarioBrand small{font-size:9px!important;opacity:.72!important}
+body.premium-mesario>header .mesarioHeaderLinks a{padding:8px 11px!important;font-size:9px!important;border-radius:8px!important;background:transparent!important}
+body.premium-mesario>main{max-width:1120px!important;padding:20px 20px 34px!important}
+body.premium-mesario #workspace{gap:12px!important}
+body.premium-mesario #workspace .mesarioNav{align-self:stretch!important;width:max-content!important;margin:0 auto!important;padding:3px!important;background:#e9eef6!important;border:0!important;border-radius:10px!important}
+body.premium-mesario #workspace .mesarioNav .mesarioNavBtn{height:36px!important;min-height:36px!important;padding:7px 18px!important;font-size:11px!important;border-radius:8px!important}
+body.premium-mesario #workspace .mesarioNav .mesarioNavBtn>span:first-child{display:none!important}
+body.premium-mesario #receptionPanel:not(.hidden){display:grid!important;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr)!important;grid-template-areas:"logout logout" "central central" "fila urnas" "more more"!important;gap:11px!important;align-items:start!important}
+body.premium-mesario #receptionPanel>.mesarioIntroCard{display:none!important}
+body.premium-mesario #receptionPanel>.mesarioReceptionCard{grid-area:logout!important;display:flex!important;justify-content:flex-end!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;box-shadow:none!important}
+body.premium-mesario #receptionPanel>.mesarioReceptionCard .topline{justify-content:flex-end!important}
+body.premium-mesario #receptionPanel>.mesarioReceptionCard h1{display:none!important}
+body.premium-mesario #receptionPanel>.mesarioReceptionCard #logout{padding:7px 13px!important;min-height:32px!important;font-size:10px!important;background:#fff!important;border:1px solid #e0e6ef!important;color:#5a6b82!important}
+body.premium-mesario #receptionPanel>.mesarioCentralCard{grid-area:central!important}
+body.premium-mesario #receptionPanel>.mesarioFilaCard{grid-area:fila!important}
+body.premium-mesario #receptionPanel>.mesarioUrnasCard{grid-area:urnas!important}
+body.premium-mesario #receptionPanel>.mesarioCentralCard,
+body.premium-mesario #receptionPanel>.mesarioFilaCard,
+body.premium-mesario #receptionPanel>.mesarioUrnasCard{padding:17px 18px!important;border:1px solid #e5eaf1!important;border-radius:12px!important;box-shadow:0 2px 8px #1b315008!important;background:#fff!important}
+body.premium-mesario #receptionPanel .card h2{margin:0 0 10px!important;font-size:13px!important;font-weight:750!important;color:#344b6b!important}
+body.premium-mesario #receptionPanel>.mesarioCentralCard .topline{align-items:center!important;justify-content:space-between!important;gap:10px!important}
+body.premium-mesario #receptionPanel>.mesarioCentralCard .topline a{font-size:10px!important;color:#476b9f!important;text-decoration:none!important}
+body.premium-mesario #receptionPanel #queueOverview{margin:0 0 9px!important;padding:9px 11px!important;border:0!important;border-radius:8px!important;background:#f3f6fb!important;font-size:11px!important}
+body.premium-mesario #receptionPanel #participationOverview{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))!important;gap:7px!important;max-height:220px!important;overflow:auto!important}
+body.premium-mesario #receptionPanel .mesarioCompactList{max-height:190px!important;gap:6px!important}
+body.premium-mesario #receptionPanel>.mesarioFilaCard .mesarioSubtle{font-size:10px!important;margin:0 0 8px!important}
+body.premium-mesario #receptionPanel>.mesarioUrnasCard #urnas{max-height:190px!important;overflow:auto!important}
+body.premium-mesario #receptionPanel>.mesarioFilaCard .mesarioOperationRow,
+body.premium-mesario #receptionPanel>.mesarioUrnasCard .mesarioOperationRow{padding:8px 10px!important;min-height:42px!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails{grid-area:more!important;min-width:0!important;padding:0!important;border:1px solid #e4e9f0!important;border-radius:11px!important;background:#fff!important;overflow:hidden!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails>summary{display:flex!important;align-items:center!important;gap:10px!important;padding:13px 16px!important;cursor:pointer!important;list-style:none!important;color:#405673!important;font-size:11px!important;font-weight:750!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails>summary::-webkit-details-marker{display:none!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails>summary:after{content:"＋";margin-left:auto;color:#5779a7;font-size:16px!important}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails[open]>summary:after{content:"−"}
+body.premium-mesario #receptionPanel>.mesarioMoreDetails>summary span{font-size:10px!important;font-weight:400!important;color:#8492a6!important}
+body.premium-mesario #receptionPanel .mesarioMoreGrid{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important;padding:0 12px 12px!important}
+body.premium-mesario #receptionPanel .mesarioMoreGrid>.card{min-width:0!important;margin:0!important;padding:13px!important;border:1px solid #e9edf3!important;border-radius:9px!important;background:#fbfcfe!important;box-shadow:none!important}
+body.premium-mesario #receptionPanel .mesarioMoreGrid .mesarioCompactList{max-height:170px!important}
+body.premium-mesario #receptionPanel .mesarioMoreGrid h2{font-size:11px!important}
+body.premium-mesario #rosterPanel:not(.hidden){max-width:100%!important;padding:19px!important;border:1px solid #e5eaf1!important;border-radius:13px!important;box-shadow:0 2px 8px #1b315008!important}
+body.premium-mesario #rosterPanel>h2{font-size:18px!important;margin:0 0 5px!important}
+body.premium-mesario #rosterPanel>p{font-size:11px!important;color:#718097!important}
+body.premium-mesario #rosterPanel .rosterSearchHero{padding:13px 15px!important;margin:12px 0!important;border-radius:10px!important;box-shadow:none!important}
+body.premium-mesario #rosterPanel .rosterStageCards{gap:9px!important}
+body.premium-mesario #rosterPanel .rosterStageCard{min-height:104px!important;height:auto!important;padding:10px!important;border-radius:10px!important;box-shadow:none!important}
+@media(max-width:760px){
+ body.premium-mesario>main{padding:13px 11px 25px!important}
+ body.premium-mesario #receptionPanel:not(.hidden){grid-template-columns:minmax(0,1fr)!important;grid-template-areas:"logout" "central" "fila" "urnas" "more"!important}
+ body.premium-mesario #receptionPanel .mesarioMoreGrid{grid-template-columns:minmax(0,1fr)!important}
+ body.premium-mesario #receptionPanel>.mesarioMoreDetails>summary{flex-wrap:wrap!important}
+ body.premium-mesario #rosterPanel .rosterStageCards{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
