@@ -1,0 +1,20 @@
+/* Barreira visual de autenticação do Mesário */
+#workspace.hidden,
+body:not(.mesario-authenticated) #workspace{
+  display:none!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+body:not(.mesario-authenticated) .mesarioHeaderLinks{
+  display:none!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+}
+body.mesario-authenticated .mesarioHeaderLinks{
+  display:flex!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+}
+#login{display:block}
+body.mesario-authenticated #login{display:none!important}
+#workspace:not(.hidden){display:block}

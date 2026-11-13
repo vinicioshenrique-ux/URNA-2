@@ -1,0 +1,623 @@
+/* Renovação visual do perfil Mesário — somente apresentação, sem alterar fluxos ou dados. */
+:root{
+ --mv-ink:#172b50;--mv-muted:#71809a;--mv-blue:#285fc2;--mv-blue2:#17438f;
+ --mv-cyan:#18a6b4;--mv-gold:#f3c34d;--mv-line:#e3eaf5;--mv-soft:#f5f8fe;
+}
+body.premium-mesario{background:
+ radial-gradient(ellipse at 7% 4%,#dce9ff 0,transparent 31%),
+ radial-gradient(ellipse at 96% 8%,#fff0ce 0,transparent 27%),
+ linear-gradient(180deg,#f5f8fd 0%,#eef3fb 100%)!important;}
+body.premium-mesario>header{
+ min-height:88px;padding:15px clamp(18px,4vw,56px);
+ background:linear-gradient(112deg,#101b55 0%,#17458d 58%,#137e9b 100%)!important;
+ box-shadow:0 12px 30px #102c6025;position:relative;overflow:hidden;
+}
+body.premium-mesario>header:after{content:"";position:absolute;width:280px;height:280px;right:7%;top:-205px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 28px #ffffff08,0 0 0 58px #ffffff06;pointer-events:none}
+body.premium-mesario>header>*{position:relative;z-index:1}
+body.premium-mesario>header img{width:54px;height:54px;border-radius:16px;border:2px solid #f4cc62;box-shadow:0 5px 16px #0003}
+.mesarioBrand strong{letter-spacing:.045em}
+.mesarioBrand small{font-size:9px;letter-spacing:.16em}
+.mesarioHeaderLinks a{border-radius:999px;background:#ffffff14;border-color:#ffffff35}
+body.premium-mesario>main{width:min(1320px,100%);padding:clamp(20px,3vw,38px) clamp(14px,3vw,38px) 48px}
+#login,#setup{
+ position:relative;width:min(500px,100%);margin:clamp(30px,6vh,70px) auto;
+ padding:clamp(25px,4vw,38px);border:1px solid #dce6f5!important;
+ border-radius:25px!important;box-shadow:0 22px 65px #17396816,0 3px 12px #17396808!important;
+ background:linear-gradient(145deg,#fff 0%,#fbfdff 72%,#f1f6ff 100%)!important;
+ overflow:hidden;animation:mvEnter .55s cubic-bezier(.2,.8,.2,1) both;
+}
+#login:before,#setup:before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,#1b4b9f,#20a7b4,#f1c34f)}
+#login:after{content:"🔐";position:absolute;right:25px;top:24px;width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:#eaf2ff;font-size:20px}
+#login h1{max-width:calc(100% - 48px);font-size:clamp(22px,3vw,27px);margin:5px 0 8px}
+#login>p:first-of-type{max-width:370px;margin:0 0 23px;font-size:13px}
+#login form,#setup form{gap:9px}
+#login label,#setup label{color:#405879;font-size:12px;letter-spacing:.01em}
+#login input,#setup input{min-height:48px;margin:7px 0 10px;padding:12px 14px;border:1px solid #d6e1f0!important;border-radius:13px!important;background:#f9fbff!important}
+#login input:focus,#setup input:focus{background:#fff!important;border-color:#5c8ee0!important;box-shadow:0 0 0 4px #3b79d51a!important}
+#login form button,#setup form button{min-height:49px;margin-top:8px;border-radius:13px!important;background:linear-gradient(110deg,#194a9e,#2670c8)!important;box-shadow:0 8px 18px #2459ad2d!important;letter-spacing:.01em}
+#login form button:hover,#setup form button:hover{filter:brightness(1.08);transform:translateY(-2px)}
+#loginError{padding:0 2px}
+#workspace{width:100%;animation:mvEnter .42s ease both}
+#receptionPanel{
+ display:grid!important;grid-template-columns:minmax(0,1.08fr) minmax(340px,.92fr);
+ grid-template-areas:"control control" "reception live" "more more";
+ gap:15px!important;align-items:stretch;max-width:100%;width:100%;
+}
+#receptionPanel>.mesarioClassLauncher{grid-area:control;margin:0!important;min-height:76px;padding:13px 18px!important;border:1px solid #dce7f6!important;border-radius:18px!important;background:linear-gradient(105deg,#fff 0%,#f2f7ff 72%,#effbfc 100%)!important;box-shadow:0 7px 22px #1739680c!important}
+.mesarioControlIcon{width:44px!important;height:44px!important;border-radius:14px!important;background:linear-gradient(145deg,#e4edff,#d9f3f4)!important;color:#2455a0;box-shadow:inset 0 1px #fff,0 4px 10px #2459ad10}
+.mesarioControlText strong{font-size:14px!important;color:#193b78!important}
+.mesarioControlText small{font-size:11px!important;color:#77869e!important}
+.mesarioControlButton{min-height:41px!important;padding:10px 15px!important;border-radius:12px!important;background:linear-gradient(110deg,#1b4c9e,#286bc2)!important;box-shadow:0 5px 13px #2459ad25!important}
+#receptionPanel>.mesarioReceptionCard{grid-area:reception;margin:0!important;min-width:0;min-height:0;padding:clamp(17px,2vw,24px)!important;border-radius:19px!important;border-color:#e0e8f3!important;box-shadow:0 9px 26px #1739680c!important}
+.mesarioReceptionHeading{padding-bottom:14px!important;border-bottom:1px solid #edf1f7}
+.mesarioSectionIcon{background:linear-gradient(145deg,#e4efff,#e5f8f5)!important;border:1px solid #e1eafa}
+.mesarioSectionTitle h1{font-size:19px!important;color:#1a3974!important}
+.mesarioLogoutButton{border-radius:10px!important;background:#f2f5fb!important;color:#60728e!important}
+.mesarioReceptionCard .rosterSearchHero{display:flex!important;align-items:flex-start!important;gap:12px!important;margin:17px 0 0!important;padding:15px!important;border:1px solid #e2eaf5!important;border-radius:15px!important;background:linear-gradient(125deg,#f5f8ff,#fbfdff)!important}
+.mesarioReceptionCard .rosterSearchHeroIcon{flex:0 0 40px;width:40px!important;height:40px!important;border-radius:12px!important;background:#e5efff!important}
+.mesarioReceptionCard .rosterSearchHeroContent label{font-size:12px!important;color:#36527c!important}
+.mesarioReceptionCard .rosterSearchHeroField{display:flex!important;gap:8px!important;align-items:center!important}
+.mesarioReceptionCard .rosterSearchHeroField input{min-height:43px!important;margin:5px 0 0!important;font-size:12px!important;border-radius:11px!important}
+.mesarioReceptionCard .rosterSearchHeroField button{min-height:43px!important;margin:5px 0 0!important;padding:10px 13px!important;border-radius:11px!important;white-space:nowrap}
+.mesarioReceptionCard .rosterSearchHeroContent>small{font-size:10px!important;color:#8a97aa!important}
+#receptionPanel>.mesarioLiveMonitorCard{grid-area:live;display:block!important;align-self:stretch;min-width:0;margin:0!important;padding:18px!important;border:1px solid #dce8f4!important;border-radius:19px!important;background:linear-gradient(145deg,#fff 0%,#f3f8ff 100%)!important;box-shadow:0 9px 26px #1739680c!important}
+.mesarioLiveHead{align-items:center!important;margin-bottom:13px!important;padding-bottom:13px!important;border-bottom:1px solid #e9eff7}
+.mesarioLiveEyebrow{font-size:9px!important;color:#348c9a!important;letter-spacing:.13em!important}
+.mesarioLiveHead h2{font-size:17px!important;color:#1b3c78!important}
+.mesarioLiveHead small{font-size:11px!important}
+.mesarioLivePulse{background:#e7f8f0!important;color:#16805a!important}
+.mesarioLiveSummary{gap:7px!important}
+.mesarioLiveMetric{border-radius:12px!important;background:#fff!important;border-color:#e5edf7!important;padding:10px!important}
+.mesarioLiveMetric small{font-size:8px!important;letter-spacing:.04em!important}
+.mesarioLiveMetric strong{font-size:20px!important;color:#2456a2!important}
+.mesarioLiveGrid{grid-template-columns:1fr!important;max-height:430px!important;gap:8px!important;padding-right:2px!important}
+.mesarioUrnaTile{padding:12px!important;border-radius:13px!important;background:#fff!important;border-color:#e3ebf5!important;box-shadow:0 3px 10px #18366b08!important}
+.mesarioUrnaTileHead>strong{font-size:13px!important;color:#21447f!important}
+.mesarioUrnaCurrent,.mesarioUrnaNext{margin-top:8px!important;padding-top:8px!important}
+.mesarioUrnaCurrent strong,.mesarioUrnaNext strong{font-size:12px!important}
+#receptionPanel>.mesarioMoreDetails{grid-area:more;margin:0!important;border-radius:16px!important;border-color:#e0e8f3!important;box-shadow:0 5px 18px #17396809!important}
+.mesarioMoreDetails>summary{padding:14px 17px!important}
+.mesarioMoreGrid{gap:10px!important}
+.mesarioMoreGrid>.card{border:1px solid #e6edf6!important}
+#rosterPanel{border-radius:20px!important;animation:mvEnter .4s ease both}
+#rosterPanel>.topline{gap:12px}
+.mesarioModalBackdrop{backdrop-filter:blur(8px)!important;background:#09183db8!important}
+.mesarioModalDialog,.mesarioRegisterDialog,.rosterClassDialog{border:1px solid #ffffffb8!important;box-shadow:0 28px 90px #061b3c50!important;animation:mvModalIn .24s ease both}
+.mesarioSegmentCard,.mesarioUrnaTile,.mesarioClassLauncher,.mesarioReceptionCard,.mesarioLiveMetric{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease!important}
+.mesarioSegmentCard:hover,.mesarioUrnaTile:hover{transform:translateY(-3px)!important}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8bb6f0!important;outline-offset:2px!important}
+@keyframes mvEnter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@keyframes mvModalIn{from{opacity:0;transform:translateY(9px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:850px){
+ #receptionPanel{grid-template-columns:1fr;grid-template-areas:"control" "reception" "live" "more"}
+ #receptionPanel>.mesarioLiveMonitorCard{min-height:0}
+ .mesarioLiveGrid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))!important;max-height:390px!important}
+}
+@media(max-width:560px){
+ body.premium-mesario>header{gap:10px;padding:12px 14px}
+ body.premium-mesario>header img{width:46px;height:46px;flex-basis:46px}
+ .mesarioBrand strong{font-size:13px}
+ .mesarioBrand small{font-size:8px;letter-spacing:.1em}
+ .mesarioHeaderLinks{width:100%;padding-left:56px}
+ .mesarioHeaderLinks a{min-height:32px;padding:7px 10px;font-size:9px}
+ body.premium-mesario>main{padding:18px 11px 30px}
+ #login,#setup{margin:25px auto;padding:23px 18px;border-radius:20px!important}
+ #login:after{right:17px;top:19px;width:37px;height:37px}
+ #receptionPanel{gap:11px!important}
+ #receptionPanel>.mesarioClassLauncher{grid-template-columns:39px minmax(0,1fr) auto!important;gap:9px!important;padding:10px!important}
+ .mesarioControlIcon{width:38px!important;height:38px!important}
+ .mesarioControlText strong{font-size:12px!important}
+ .mesarioControlText small{font-size:9px!important}
+ .mesarioControlButton{font-size:9px!important;padding:9px!important}
+ #receptionPanel>.mesarioReceptionCard,#receptionPanel>.mesarioLiveMonitorCard{padding:14px!important}
+ .mesarioReceptionCard .rosterSearchHero{padding:11px!important;gap:9px!important}
+ .mesarioReceptionCard .rosterSearchHeroField{flex-direction:column!important;align-items:stretch!important}
+ .mesarioReceptionCard .rosterSearchHeroField button{width:100%;margin-top:2px!important}
+ .mesarioLiveSummary{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+ .mesarioLiveMetric{padding:8px 6px!important}
+ .mesarioLiveMetric small{font-size:7px!important}
+ .mesarioLiveMetric strong{font-size:17px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+
+/* Correção de contraste dos atalhos e liberação de altura do monitor ao vivo. */
+@media(min-width:900px){
+ html,body.premium-mesario{height:auto!important;min-height:100%!important;overflow-x:hidden!important;overflow-y:auto!important}
+ body.premium-mesario>main{height:auto!important;min-height:calc(100vh - 78px)!important;overflow:visible!important;display:block!important}
+ #workspace{height:auto!important;min-height:0!important;display:block!important;overflow:visible!important}
+ #receptionPanel{flex:none!important;min-height:0!important;grid-template-rows:auto auto auto!important}
+}
+body.premium-mesario .mesarioHeaderLinks a,
+body.premium-mesario .mesarioHeaderLinks a:visited{
+ color:#fff!important;background:#ffffff18!important;border-color:#ffffff55!important;
+ text-shadow:0 1px 2px #071b45!important;
+}
+body.premium-mesario .mesarioHeaderLinks a:hover,
+body.premium-mesario .mesarioHeaderLinks a:focus{
+ color:#fff!important;background:#ffffff30!important;border-color:#ffffff85!important;
+}
+body.premium-mesario .mesarioControlButton,
+body.premium-mesario .mesarioControlButton *,
+body.premium-mesario #receptionPanel button:not(.secondary){
+ color:#fff!important;
+}
+body.premium-mesario .mesarioControlButton span{color:#fff!important}
+body.premium-mesario .mesarioLiveMonitorCard{height:auto!important;min-height:0!important;overflow:visible!important}
+body.premium-mesario .mesarioLiveHead,
+body.premium-mesario .mesarioLiveHead *{min-width:0}
+body.premium-mesario .mesarioLiveEyebrow{color:#247987!important}
+body.premium-mesario .mesarioLiveHead h2{color:#193b78!important}
+body.premium-mesario .mesarioLiveHead small{color:#63748f!important}
+body.premium-mesario .mesarioLiveGrid{
+ max-height:min(65vh,720px)!important;height:auto!important;min-height:90px!important;
+ overflow-y:auto!important;overflow-x:hidden!important;align-content:start!important;
+ padding:3px 5px 12px 1px!important;
+}
+body.premium-mesario .mesarioUrnaTile{height:auto!important;min-height:0!important;overflow:visible!important}
+body.premium-mesario .mesarioUrnaTile,
+body.premium-mesario .mesarioUrnaTile *{overflow-wrap:anywhere}
+body.premium-mesario .mesarioUrnaTileHead>strong{color:#1d3d75!important}
+body.premium-mesario .mesarioUrnaCurrent small,
+body.premium-mesario .mesarioUrnaNext small{color:#64758f!important}
+body.premium-mesario .mesarioUrnaCurrent strong,
+body.premium-mesario .mesarioUrnaNext strong{color:#243c63!important}
+body.premium-mesario .mesarioMiniBadge.online,
+body.premium-mesario .mesarioMiniBadge.available{color:#12643e!important}
+body.premium-mesario .mesarioMiniBadge.offline{color:#a51f31!important}
+body.premium-mesario .mesarioMiniBadge.busy{color:#805300!important}
+@media(max-width:899px){
+ body.premium-mesario>main{height:auto!important;overflow:visible!important}
+ .mesarioLiveGrid{max-height:60vh!important}
+}
+@media(prefers-reduced-motion:reduce){body.premium-mesario .mesarioLiveGrid{scroll-behavior:auto!important}}
+
+/* Home compacta: controle, recepção e central visíveis simultaneamente em desktop. */
+@media(min-width:1100px) and (min-height:650px){
+ html,body.premium-mesario{height:100%!important;min-height:100%!important;overflow:hidden!important}
+ body.premium-mesario>header{height:78px;min-height:78px;padding-top:10px;padding-bottom:10px}
+ body.premium-mesario>main{
+  height:calc(100dvh - 78px)!important;min-height:0!important;
+  padding:12px 18px 14px!important;overflow:hidden!important;
+  display:flex!important;flex-direction:column!important;
+ }
+ #workspace{height:100%!important;min-height:0!important;display:flex!important;flex:1 1 auto!important;overflow:hidden!important}
+ #receptionPanel{
+  height:100%!important;min-height:0!important;flex:1 1 auto!important;
+  display:grid!important;
+  grid-template-columns:minmax(190px,.72fr) minmax(290px,1.08fr) minmax(350px,1.3fr)!important;
+  grid-template-rows:minmax(0,1fr) auto!important;
+  grid-template-areas:"control reception live" "more more more"!important;
+  gap:11px!important;align-items:stretch!important;
+ }
+ #receptionPanel>.mesarioClassLauncher{
+  min-width:0;min-height:0!important;height:100%;padding:16px 13px!important;
+  flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:13px;
+ }
+ .mesarioControlIcon{width:48px!important;height:48px!important}
+ .mesarioControlText{min-width:0}
+ .mesarioControlText strong{font-size:15px!important}
+ .mesarioControlText small{font-size:11px!important;line-height:1.45}
+ .mesarioControlButton{width:100%;white-space:normal!important;justify-content:center}
+ #receptionPanel>.mesarioReceptionCard{
+  height:100%;min-height:0!important;overflow:auto;padding:15px!important;
+ }
+ .mesarioReceptionHeading{padding-bottom:10px!important}
+ .mesarioSectionTitle h1{font-size:18px!important}
+ .mesarioReceptionCard .rosterSearchHero{
+  margin:12px 0 0!important;padding:12px!important;gap:9px!important;
+  flex-direction:column!important;
+ }
+ .mesarioReceptionCard .rosterSearchHeroIcon{width:34px!important;height:34px!important;flex-basis:34px}
+ .mesarioReceptionCard .rosterSearchHeroField{flex-direction:column!important;align-items:stretch!important}
+ .mesarioReceptionCard .rosterSearchHeroField input{min-height:40px!important}
+ .mesarioReceptionCard .rosterSearchHeroField button{min-height:39px!important;width:100%}
+ .mesarioReceptionCard .rosterSearchHeroContent>small{font-size:10px!important}
+ #receptionPanel>.mesarioLiveMonitorCard{
+  height:100%;min-height:0!important;display:flex!important;flex-direction:column!important;
+  padding:14px!important;overflow:hidden!important;
+ }
+ .mesarioLiveHead{margin-bottom:9px!important;padding-bottom:9px!important;flex:0 0 auto}
+ .mesarioLiveHead h2{font-size:16px!important}
+ .mesarioLiveSummary{grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:6px!important;flex:0 0 auto}
+ .mesarioLiveMetric{padding:7px 6px!important}
+ .mesarioLiveMetric small{font-size:7px!important}
+ .mesarioLiveMetric strong{font-size:18px!important}
+ body.premium-mesario .mesarioLiveGrid{
+  flex:1 1 auto!important;min-height:0!important;max-height:none!important;
+  height:auto!important;overflow-y:auto!important;grid-template-columns:1fr!important;
+  gap:7px!important;padding:2px 4px 8px 0!important;
+ }
+ body.premium-mesario .mesarioUrnaTile{padding:9px 10px!important}
+ body.premium-mesario .mesarioUrnaCurrent,
+ body.premium-mesario .mesarioUrnaNext{margin-top:6px!important;padding-top:6px!important}
+ body.premium-mesario .mesarioUrnaCurrent strong,
+ body.premium-mesario .mesarioUrnaNext strong{font-size:11px!important}
+ #receptionPanel>.mesarioMoreDetails{grid-area:more;max-height:43px;overflow:auto}
+ #receptionPanel>.mesarioMoreDetails>summary{padding:10px 14px!important}
+}
+@media(min-width:1100px) and (max-height:649px){
+ body.premium-mesario>main{padding-top:8px!important;padding-bottom:8px!important}
+ #receptionPanel{gap:8px!important}
+ #receptionPanel>.mesarioClassLauncher,
+ #receptionPanel>.mesarioReceptionCard,
+ #receptionPanel>.mesarioLiveMonitorCard{padding:10px!important}
+}
+@media(max-width:1099px){
+ #receptionPanel{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;grid-template-areas:"control control" "reception live" "more more"!important}
+}
+@media(max-width:850px){
+ #receptionPanel{grid-template-columns:1fr!important;grid-template-areas:"control" "reception" "live" "more"!important}
+}
+
+/* Refinamento da home: cartões menores, títulos centralizados e urnas em mosaico. */
+@media(min-width:1100px) and (min-height:650px){
+ #receptionPanel{
+  width:min(100%,1500px)!important;height:min(100%,760px)!important;
+  margin:0 auto!important;align-self:center!important;
+  grid-template-columns:minmax(205px,.78fr) minmax(300px,1fr) minmax(390px,1.22fr)!important;
+  grid-template-areas:"control reception live" "more more more"!important;
+  grid-template-rows:minmax(0,1fr) auto!important;
+  gap:10px!important;
+ }
+ #receptionPanel>.mesarioClassLauncher{grid-area:control!important}
+ #receptionPanel>.mesarioReceptionCard{grid-area:reception!important}
+ #receptionPanel>.mesarioLiveMonitorCard{grid-area:live!important}
+ #receptionPanel>.mesarioClassLauncher,
+ #receptionPanel>.mesarioReceptionCard,
+ #receptionPanel>.mesarioLiveMonitorCard{
+  border-radius:17px!important;box-shadow:0 7px 22px #18366b12!important;
+ }
+ .mesarioControlText{text-align:center!important}
+ .mesarioControlText strong{display:block;text-align:center!important;font-size:16px!important;color:#193b78!important}
+ .mesarioControlText small{display:block;text-align:center!important;color:#526b91!important;font-weight:650!important}
+ .mesarioReceptionHeading{justify-content:center!important;position:relative!important}
+ .mesarioReceptionHeading .mesarioSectionTitle{justify-content:center!important;text-align:center!important;flex-direction:column!important;gap:5px!important}
+ .mesarioReceptionHeading .mesarioSectionTitle h1{text-align:center!important;font-size:18px!important;color:#193b78!important}
+ .mesarioReceptionHeading .mesarioSectionTitle small{text-align:center!important;color:#526b91!important;font-weight:650!important}
+ .mesarioReceptionHeading .mesarioLogoutButton{position:absolute!important;right:0;top:0}
+ .mesarioLiveHead{justify-content:center!important;text-align:center!important;position:relative!important}
+ .mesarioLiveHead>div{text-align:center!important}
+ .mesarioLiveEyebrow{display:block!important;font-weight:900!important;letter-spacing:1.1px!important}
+ .mesarioLiveHead h2{text-align:center!important;font-size:17px!important}
+ .mesarioLiveHead small{display:block!important;text-align:center!important;font-weight:650!important}
+ .mesarioLivePulse{position:absolute!important;right:0;top:0}
+ body.premium-mesario .mesarioLiveGrid{
+  grid-template-columns:repeat(2,minmax(0,1fr))!important;
+  grid-auto-rows:min-content!important;align-content:start!important;
+  gap:8px!important;overflow-y:auto!important;
+ }
+ body.premium-mesario .mesarioUrnaTile{
+  display:flex!important;flex-direction:column!important;gap:6px!important;
+  min-width:0!important;padding:9px!important;border-radius:12px!important;
+ }
+ body.premium-mesario .mesarioUrnaTileHead{
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  justify-content:center!important;text-align:center!important;gap:6px!important;
+ }
+ body.premium-mesario .mesarioUrnaTileHead>strong{
+  display:block!important;width:100%!important;text-align:center!important;
+  font-size:13px!important;line-height:1.2!important;overflow-wrap:anywhere!important;
+ }
+ body.premium-mesario .mesarioUrnaBadges{
+  display:flex!important;justify-content:center!important;align-items:center!important;
+  flex-wrap:wrap!important;gap:4px!important;width:100%!important;
+ }
+ body.premium-mesario .mesarioMiniBadge{
+  white-space:normal!important;text-align:center!important;
+  font-size:8px!important;line-height:1.2!important;padding:4px 5px!important;
+ }
+ body.premium-mesario .mesarioUrnaCurrent,
+ body.premium-mesario .mesarioUrnaNext{
+  display:flex!important;flex-direction:column!important;align-items:center!important;
+  text-align:center!important;gap:3px!important;margin-top:3px!important;padding-top:6px!important;
+  min-width:0!important;
+ }
+ body.premium-mesario .mesarioUrnaCurrent small,
+ body.premium-mesario .mesarioUrnaNext small{font-size:8px!important;line-height:1.2!important}
+ body.premium-mesario .mesarioUrnaCurrent strong,
+ body.premium-mesario .mesarioUrnaNext strong{
+  display:block!important;width:100%!important;text-align:center!important;
+  font-size:11px!important;line-height:1.25!important;overflow-wrap:anywhere!important;
+ }
+ #receptionPanel>.mesarioMoreDetails{grid-area:more!important}
+}
+@media(min-width:851px) and (max-width:1099px){
+ #receptionPanel>.mesarioClassLauncher{grid-area:control!important}
+ #receptionPanel>.mesarioReceptionCard{grid-area:reception!important}
+ #receptionPanel>.mesarioLiveMonitorCard{grid-area:live!important}
+ #receptionPanel>.mesarioMoreDetails{grid-area:more!important}
+ body.premium-mesario .mesarioLiveGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:850px){
+ body.premium-mesario .mesarioLiveGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:520px){
+ body.premium-mesario .mesarioLiveGrid{grid-template-columns:1fr!important}
+}
+
+/* v261 — harmonização visual, proporção e conteúdo sempre visível */
+:root{
+ --mv-blue:#1466e6;--mv-blue-deep:#0f50b3;--mv-navy:#12356f;
+ --mv-sky:#eaf3ff;--mv-line:#d8e6f8;--mv-ink:#18345f;
+ --mv-muted:#5d7190;--mv-gold:#f2b544;--mv-green:#16845b;
+}
+body.premium-mesario{
+ background:linear-gradient(145deg,#f4f8ff 0%,#edf4ff 48%,#f8fbff 100%)!important;
+ color:var(--mv-ink)!important;
+}
+body.premium-mesario>header{
+ background:linear-gradient(105deg,var(--mv-blue-deep),var(--mv-blue) 65%,#287fe9)!important;
+ box-shadow:0 4px 18px #0f50b329!important;
+ border-bottom:3px solid var(--mv-gold)!important;
+}
+body.premium-mesario>main{max-width:1660px!important;margin:0 auto!important}
+#receptionPanel{
+ width:100%!important;max-width:1540px!important;height:auto!important;
+ min-height:0!important;margin:0 auto!important;align-self:stretch!important;
+ display:grid!important;grid-template-columns:minmax(205px,.72fr) minmax(320px,1.04fr) minmax(390px,1.24fr)!important;
+ grid-template-rows:auto auto!important;
+ grid-template-areas:"control reception live" "more more more"!important;
+ align-items:stretch!important;gap:16px!important;overflow:visible!important;
+}
+#receptionPanel>.mesarioClassLauncher,
+#receptionPanel>.mesarioReceptionCard,
+#receptionPanel>.mesarioLiveMonitorCard{
+ box-sizing:border-box!important;min-width:0!important;height:auto!important;min-height:390px!important;
+ border:1px solid var(--mv-line)!important;border-radius:20px!important;
+ background:#fff!important;box-shadow:0 9px 26px #183e7510!important;
+ overflow:visible!important;padding:20px!important;
+}
+#receptionPanel>.mesarioClassLauncher{
+ grid-area:control!important;display:flex!important;flex-direction:column!important;
+ justify-content:center!important;align-items:center!important;gap:16px!important;
+ background:linear-gradient(160deg,#fff 0%,#f0f6ff 100%)!important;
+ border-top:4px solid var(--mv-blue)!important;
+}
+#receptionPanel>.mesarioReceptionCard{
+ grid-area:reception!important;border-top:4px solid #2d83e8!important;
+}
+#receptionPanel>.mesarioLiveMonitorCard{
+ grid-area:live!important;border-top:4px solid var(--mv-gold)!important;
+ display:flex!important;flex-direction:column!important;overflow:visible!important;
+}
+#receptionPanel>.mesarioMoreDetails{
+ grid-area:more!important;max-height:none!important;overflow:visible!important;
+ border:1px solid var(--mv-line)!important;border-radius:15px!important;
+ background:#fff!important;box-shadow:0 5px 18px #183e750b!important;
+}
+.mesarioControlIcon{
+ width:58px!important;height:58px!important;border-radius:18px!important;
+ background:linear-gradient(145deg,var(--mv-blue),var(--mv-blue-deep))!important;
+ box-shadow:0 7px 16px #1466e633!important;
+}
+.mesarioControlText strong{color:var(--mv-navy)!important;font-size:17px!important}
+.mesarioControlText small{color:var(--mv-muted)!important;font-size:12px!important;line-height:1.5!important}
+.mesarioControlButton{
+ background:linear-gradient(110deg,var(--mv-blue),var(--mv-blue-deep))!important;
+ border:0!important;border-radius:12px!important;box-shadow:0 5px 13px #1466e629!important;
+ min-height:42px!important;font-weight:800!important;
+}
+.mesarioReceptionHeading,.mesarioLiveHead{
+ min-width:0!important;gap:10px!important;
+}
+.mesarioReceptionHeading .mesarioSectionTitle h1,
+.mesarioLiveHead h2{color:var(--mv-navy)!important;font-weight:850!important}
+.mesarioReceptionHeading .mesarioSectionTitle small,
+.mesarioLiveHead small{color:var(--mv-muted)!important}
+.mesarioReceptionCard .rosterSearchHero{
+ background:linear-gradient(135deg,#edf5ff,#f8fbff)!important;
+ border:1px solid #d7e7fb!important;border-radius:15px!important;
+}
+.mesarioReceptionCard .rosterSearchHeroField input{
+ border:1px solid #c8d9f0!important;border-radius:11px!important;
+ min-width:0!important;max-width:100%!important;
+}
+.mesarioReceptionCard .rosterSearchHeroField button{
+ background:var(--mv-blue)!important;border-radius:11px!important;
+}
+.mesarioLiveSummary{gap:9px!important;min-width:0!important}
+.mesarioLiveMetric{
+ min-width:0!important;border:1px solid var(--mv-line)!important;
+ border-radius:13px!important;background:#f4f8ff!important;padding:11px 8px!important;
+}
+.mesarioLiveMetric strong{color:var(--mv-blue-deep)!important}
+.mesarioLiveMetric small{color:var(--mv-muted)!important;line-height:1.25!important}
+body.premium-mesario .mesarioLiveGrid{
+ flex:0 0 auto!important;height:auto!important;max-height:none!important;min-height:0!important;
+ display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;
+ grid-auto-rows:minmax(0,auto)!important;align-content:start!important;
+ gap:10px!important;overflow:visible!important;padding:4px 1px!important;
+}
+body.premium-mesario .mesarioUrnaTile{
+ min-width:0!important;height:auto!important;min-height:0!important;
+ box-sizing:border-box!important;padding:12px!important;
+ border:1px solid #d7e5f7!important;border-radius:14px!important;
+ background:linear-gradient(150deg,#fff,#f6faff)!important;
+ box-shadow:0 3px 10px #1744770b!important;overflow:visible!important;
+}
+body.premium-mesario .mesarioUrnaTileHead{min-width:0!important;gap:7px!important}
+body.premium-mesario .mesarioUrnaTileHead>strong{
+ color:var(--mv-navy)!important;font-size:13px!important;line-height:1.35!important;
+ overflow-wrap:anywhere!important;white-space:normal!important;
+}
+body.premium-mesario .mesarioMiniBadge{
+ border-radius:7px!important;font-size:9px!important;font-weight:800!important;
+ padding:4px 7px!important;line-height:1.25!important;
+}
+body.premium-mesario .mesarioUrnaCurrent,
+body.premium-mesario .mesarioUrnaNext{
+ min-width:0!important;overflow:visible!important;
+ border-top:1px solid #e2ebf7!important;padding-top:8px!important;margin-top:7px!important;
+}
+body.premium-mesario .mesarioUrnaCurrent strong,
+body.premium-mesario .mesarioUrnaNext strong{
+ color:#24466f!important;font-size:11px!important;line-height:1.4!important;
+ white-space:normal!important;overflow-wrap:anywhere!important;
+}
+body.premium-mesario .mesarioUrnaCurrent small,
+body.premium-mesario .mesarioUrnaNext small{color:var(--mv-muted)!important}
+#receptionPanel button,#receptionPanel input,#receptionPanel select{
+ max-width:100%!important;box-sizing:border-box!important;
+}
+#receptionPanel *{min-width:0}
+@media(min-width:1100px){
+ html,body.premium-mesario{height:auto!important;min-height:100%!important;overflow-x:hidden!important;overflow-y:auto!important}
+ body.premium-mesario>main{height:auto!important;min-height:calc(100vh - 78px)!important;overflow:visible!important;padding:22px!important;display:block!important}
+ #workspace{height:auto!important;min-height:0!important;overflow:visible!important;display:block!important}
+ #receptionPanel{height:auto!important;min-height:0!important}
+ #receptionPanel>.mesarioClassLauncher,
+ #receptionPanel>.mesarioReceptionCard,
+ #receptionPanel>.mesarioLiveMonitorCard{min-height:430px!important}
+}
+@media(min-width:851px) and (max-width:1099px){
+ #receptionPanel{grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr)!important;
+ grid-template-areas:"control control" "reception live" "more more"!important}
+ #receptionPanel>.mesarioClassLauncher{min-height:170px!important;flex-direction:row!important}
+ #receptionPanel>.mesarioReceptionCard,#receptionPanel>.mesarioLiveMonitorCard{min-height:400px!important}
+}
+@media(max-width:850px){
+ body.premium-mesario>main{height:auto!important;min-height:0!important;overflow:visible!important;padding:16px 12px 28px!important}
+ #workspace{height:auto!important;overflow:visible!important}
+ #receptionPanel{display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+ grid-template-areas:"control" "reception" "live" "more"!important;gap:12px!important}
+ #receptionPanel>.mesarioClassLauncher{min-height:150px!important;flex-direction:row!important;padding:16px!important}
+ #receptionPanel>.mesarioReceptionCard,#receptionPanel>.mesarioLiveMonitorCard{min-height:0!important;padding:16px!important}
+ body.premium-mesario .mesarioLiveGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:520px){
+ body.premium-mesario .mesarioLiveGrid{grid-template-columns:minmax(0,1fr)!important}
+ #receptionPanel>.mesarioClassLauncher{flex-wrap:wrap!important}
+ .mesarioControlButton{width:100%!important}
+}
+
+/* v262 — cartões mais curtos, compactos e proporcionais */
+@media(min-width:1100px){
+ body.premium-mesario>main{padding:20px 18px 30px!important}
+ #receptionPanel{
+  width:min(100%,1280px)!important;max-width:1280px!important;
+  grid-template-columns:minmax(205px,.78fr) minmax(300px,1.08fr) minmax(340px,1.14fr)!important;
+  gap:13px!important;
+ }
+ #receptionPanel>.mesarioClassLauncher,
+ #receptionPanel>.mesarioReceptionCard,
+ #receptionPanel>.mesarioLiveMonitorCard{
+  min-height:330px!important;height:auto!important;padding:17px!important;
+  border-radius:17px!important;
+ }
+ #receptionPanel>.mesarioClassLauncher{
+  width:100%!important;max-width:none!important;align-self:stretch!important;
+  gap:13px!important;
+ }
+ .mesarioControlIcon{width:52px!important;height:52px!important}
+ .mesarioControlText strong{font-size:16px!important}
+ .mesarioControlText small{font-size:11px!important}
+ .mesarioControlButton{width:auto!important;min-height:39px!important;padding:9px 13px!important}
+ #receptionPanel>.mesarioReceptionCard{padding:17px 18px!important}
+ .mesarioReceptionHeading{padding-bottom:11px!important}
+ .mesarioSectionIcon{width:38px!important;height:38px!important;flex-basis:38px!important}
+ .mesarioSectionTitle h1{font-size:18px!important}
+ .mesarioSectionTitle small{font-size:10px!important}
+ .mesarioLogoutButton{padding:7px 10px!important;font-size:10px!important}
+ .mesarioReceptionCard .rosterSearchHero{
+  margin:13px 0 0!important;padding:13px!important;gap:10px!important;
+  flex-direction:row!important;align-items:center!important;
+ }
+ .mesarioReceptionCard .rosterSearchHeroIcon{width:38px!important;height:38px!important;flex:0 0 38px!important}
+ .mesarioReceptionCard .rosterSearchHeroContent{flex:1 1 auto!important;min-width:0!important}
+ .mesarioReceptionCard .rosterSearchHeroField{
+  display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;
+  gap:7px!important;align-items:center!important;
+ }
+ .mesarioReceptionCard .rosterSearchHeroField input{min-height:39px!important;margin:4px 0 0!important}
+ .mesarioReceptionCard .rosterSearchHeroField button{min-height:39px!important;margin:4px 0 0!important;padding:9px 12px!important}
+ .mesarioReceptionCard .rosterSearchHeroContent>small{font-size:9px!important;margin-top:5px!important}
+ #receptionPanel>.mesarioLiveMonitorCard{padding:16px!important}
+ .mesarioLiveHead{margin-bottom:9px!important;padding-bottom:10px!important}
+ .mesarioLiveHead h2{font-size:16px!important}
+ .mesarioLiveSummary{gap:7px!important}
+ .mesarioLiveMetric{padding:9px 6px!important}
+ body.premium-mesario .mesarioLiveGrid{gap:8px!important}
+ body.premium-mesario .mesarioUrnaTile{padding:10px!important}
+}
+@media(min-width:851px) and (max-width:1099px){
+ #receptionPanel{max-width:920px!important;gap:12px!important}
+ #receptionPanel>.mesarioClassLauncher,
+ #receptionPanel>.mesarioReceptionCard,
+ #receptionPanel>.mesarioLiveMonitorCard{min-height:300px!important;padding:16px!important}
+}
+@media(max-width:850px){
+ #receptionPanel{gap:11px!important}
+ #receptionPanel>.mesarioClassLauncher,
+ #receptionPanel>.mesarioReceptionCard,
+ #receptionPanel>.mesarioLiveMonitorCard{min-height:0!important;padding:15px!important}
+ .mesarioReceptionCard .rosterSearchHero{padding:12px!important}
+}
+
+/* v288 — identidade macOS refinada no perfil Mesário */
+body.premium-mesario{background:radial-gradient(ellipse at 8% 0%,#dbeafe 0,transparent 34%),radial-gradient(ellipse at 96% 8%,#fce7f3 0,transparent 29%),radial-gradient(ellipse at 82% 100%,#cffafe 0,transparent 35%),linear-gradient(135deg,#eef2ff,#f8fafc 48%,#eff6ff)!important;background-attachment:fixed!important}
+body.premium-mesario>header{position:sticky!important;top:0;z-index:500!important;min-height:72px!important;padding:10px clamp(14px,3vw,34px)!important;background:linear-gradient(110deg,#14295fe8,#2459a9e8 58%,#16899be8)!important;border:1px solid #ffffff40!important;border-top:0!important;box-shadow:0 8px 28px #17396820,inset 0 1px #ffffff38!important;backdrop-filter:blur(22px) saturate(155%)!important;-webkit-backdrop-filter:blur(22px) saturate(155%)!important}
+body.premium-mesario>header img{width:46px!important;height:46px!important;border-radius:13px!important}
+body.premium-mesario .mesarioHeaderLinks a{border-radius:11px!important;padding:9px 13px!important;background:#ffffff20!important;border:1px solid #ffffff42!important;box-shadow:inset 0 1px #ffffff30!important;backdrop-filter:blur(12px)!important}
+body.premium-mesario>main{width:min(1440px,100%)!important}
+body.premium-mesario #workspace{border:1px solid #ffffffa8!important;border-radius:24px!important;background:#ffffff50!important;box-shadow:0 18px 55px #24436f12,inset 0 1px #ffffffa8!important;padding:clamp(10px,1.5vw,18px)!important;backdrop-filter:blur(18px) saturate(130%)!important;-webkit-backdrop-filter:blur(18px) saturate(130%)!important}
+body.premium-mesario #receptionPanel>.mesarioClassLauncher,body.premium-mesario #receptionPanel>.mesarioReceptionCard,body.premium-mesario #receptionPanel>.mesarioLiveMonitorCard,body.premium-mesario #receptionPanel>.mesarioMoreDetails{border:1px solid #ffffffd9!important;background:linear-gradient(145deg,#ffffffeb,#f7faffd9)!important;box-shadow:0 9px 26px #1e3a6812,inset 0 1px #fff!important;backdrop-filter:blur(14px) saturate(135%)!important;-webkit-backdrop-filter:blur(14px) saturate(135%)!important}
+body.premium-mesario .mesarioClassLauncher{border-top:3px solid #3978d8!important}
+body.premium-mesario .mesarioReceptionCard{border-top:3px solid #2397c5!important}
+body.premium-mesario .mesarioLiveMonitorCard{border-top:3px solid #e7b849!important}
+body.premium-mesario .mesarioReceptionCard .rosterSearchHero{background:linear-gradient(125deg,#eff6ffdf,#ffffffdf)!important;border:1px solid #dbe8f8!important;box-shadow:inset 0 1px #fff!important}
+body.premium-mesario .mesarioLiveMetric{background:#ffffffc9!important;border-color:#e0e9f5!important}
+body.premium-mesario .mesarioUrnaTile{background:#ffffffd9!important;border-color:#dfe8f5!important}
+/* Backdrops e janelas compactas, centralizadas e translúcidas */
+body.premium-mesario .mesarioModalBackdrop,body.premium-mesario .mesarioRegisterBackdrop,body.premium-mesario .rosterClassBackdrop,body.premium-mesario .editBackdrop{position:fixed!important;inset:0!important;z-index:10000!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:clamp(12px,3vw,28px)!important;background:#101c3d65!important;backdrop-filter:blur(13px) saturate(125%)!important;-webkit-backdrop-filter:blur(13px) saturate(125%)!important}
+body.premium-mesario .mesarioModalBackdrop.hidden,body.premium-mesario .mesarioRegisterBackdrop.hidden,body.premium-mesario .rosterClassBackdrop.hidden,body.premium-mesario .editBackdrop.hidden{display:none!important}
+body.premium-mesario .mesarioModalDialog,body.premium-mesario .mesarioRegisterDialog,body.premium-mesario .rosterClassDialog,body.premium-mesario .editModal{width:min(680px,calc(100vw - 32px))!important;max-width:680px!important;max-height:min(80dvh,690px)!important;overflow:auto!important;overscroll-behavior:contain!important;padding:clamp(17px,2.2vw,24px)!important;border:1px solid #ffffffd9!important;border-radius:22px!important;background:linear-gradient(145deg,#ffffffed,#f8fbffed 65%,#f1f5ffed)!important;box-shadow:0 30px 100px #07173555,0 4px 18px #15376a18,inset 0 1px #fff!important;backdrop-filter:blur(26px) saturate(145%)!important;-webkit-backdrop-filter:blur(26px) saturate(145%)!important;animation:mesarioGlassWindow .24s cubic-bezier(.2,.8,.2,1) both!important;scrollbar-width:thin;scrollbar-color:#aabbd5 transparent}
+body.premium-mesario .mesarioModalHead,body.premium-mesario .mesarioRegisterHead,body.premium-mesario .rosterClassHead{align-items:center!important;padding-bottom:13px!important;margin-bottom:6px!important;border-bottom:1px solid #e3ebf6!important}
+body.premium-mesario .mesarioModalHead h2,body.premium-mesario .mesarioRegisterHead h2,body.premium-mesario .rosterClassHead h2,body.premium-mesario .editModal h2{font-size:clamp(17px,2vw,21px)!important;color:#19366e!important;letter-spacing:-.025em}
+body.premium-mesario .mesarioModalHead p,body.premium-mesario .mesarioRegisterHead p{font-size:11px!important;color:#71809a!important}
+body.premium-mesario .mesarioModalHead button,body.premium-mesario .mesarioRegisterHead button,body.premium-mesario .rosterClassHead button,body.premium-mesario .editModal .topline button{width:34px!important;height:34px!important;min-width:34px!important;padding:0!important;display:grid!important;place-items:center!important;border-radius:11px!important;background:#edf3fc!important;color:#365887!important;border:1px solid #dce7f5!important;font-size:20px!important;box-shadow:inset 0 1px #fff!important}
+body.premium-mesario .mesarioPickerActions{top:-18px!important;background:#ffffffed!important;backdrop-filter:blur(12px)!important}
+body.premium-mesario .mesarioClassStageHead{background:#f8fbffed!important}
+body.premium-mesario .mesarioClassRow,body.premium-mesario .rosterClassCards>*{border-radius:12px!important;border-color:#e0e9f5!important}
+body.premium-mesario .mesarioRegisterDialog label,body.premium-mesario .editModal label{font-size:11px!important;color:#435b7c!important;font-weight:750}
+body.premium-mesario .mesarioRegisterDialog input,body.premium-mesario .mesarioRegisterDialog select,body.premium-mesario .editModal input,body.premium-mesario .editModal select{min-height:42px!important;border-radius:11px!important;background:#ffffffd9!important;border:1px solid #d8e4f2!important;padding:10px 12px!important}
+body.premium-mesario .mesarioRegisterFooter{display:flex;justify-content:flex-end;gap:9px;padding-top:12px}
+body.premium-mesario .mesarioRegisterFooter button{min-height:40px!important;border-radius:11px!important;padding:10px 15px!important}
+@keyframes mesarioGlassWindow{from{opacity:0;transform:translateY(10px) scale(.975);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
+@media(max-width:700px){body.premium-mesario>header{position:relative!important;min-height:66px!important}body.premium-mesario #workspace{padding:8px!important;border-radius:17px!important}body.premium-mesario .mesarioModalBackdrop,body.premium-mesario .mesarioRegisterBackdrop,body.premium-mesario .rosterClassBackdrop,body.premium-mesario .editBackdrop{padding:10px!important}body.premium-mesario .mesarioModalDialog,body.premium-mesario .mesarioRegisterDialog,body.premium-mesario .rosterClassDialog,body.premium-mesario .editModal{width:min(100%,560px)!important;max-width:560px!important;max-height:88dvh!important;padding:16px!important;border-radius:18px!important}}
+@media(prefers-reduced-motion:reduce){body.premium-mesario .mesarioModalDialog,body.premium-mesario .mesarioRegisterDialog,body.premium-mesario .rosterClassDialog,body.premium-mesario .editModal{animation:none!important}}
+
+/* v291 — fila no acesso rápido e catálogo de urnas minimalista */
+body.premium-mesario .mesarioHeaderLinks{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important;width:auto!important;padding-left:0!important;margin-left:auto!important;flex-wrap:wrap!important}
+body.premium-mesario .mesarioHeaderLinks a{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:36px!important;padding:8px 12px!important;border-radius:12px!important;font-size:10px!important;font-weight:850!important;letter-spacing:.025em!important;white-space:nowrap!important;text-decoration:none!important;transition:transform .2s ease,background .2s ease,box-shadow .2s ease!important}
+body.premium-mesario .mesarioHeaderLinks a:hover{transform:translateY(-2px)!important;box-shadow:0 7px 18px #061c4430!important}
+body.premium-mesario .mesarioHeaderLinks .mesarioQueueLink{background:linear-gradient(115deg,#ffffff30,#b8eaff35)!important;border-color:#bde8ff88!important;box-shadow:inset 0 1px #ffffff55,0 4px 13px #061c4420!important}
+body.premium-mesario .mesarioLiveMonitorCard{padding:15px 17px!important;border-radius:17px!important;background:linear-gradient(135deg,#ffffffed,#f3f7ffdf)!important;border:1px solid #dce7f5!important;box-shadow:0 8px 24px #1739680c!important;backdrop-filter:blur(16px)!important}
+body.premium-mesario .mesarioLiveHead{margin:0!important;padding:0 0 11px!important;align-items:center!important}
+body.premium-mesario .mesarioLiveHead h2{font-size:15px!important;margin:3px 0!important}
+body.premium-mesario .mesarioLiveHead small{font-size:10px!important}
+body.premium-mesario .mesarioLivePulse{font-size:9px!important;padding:6px 9px!important}
+body.premium-mesario .mesarioLiveGrid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(205px,1fr))!important;gap:9px!important;max-height:180px!important;overflow:auto!important;padding:9px 2px 2px!important}
+body.premium-mesario .mesarioUrnaTile{min-height:66px!important;padding:10px 12px!important;border-radius:13px!important;background:linear-gradient(135deg,#fff,#f8fbff)!important;border:1px solid #e0e9f5!important;box-shadow:0 4px 13px #193b6e0a!important;animation:mesarioUrnaAppear .35s ease both!important}
+body.premium-mesario .mesarioUrnaTileHead{display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important}
+body.premium-mesario .mesarioUrnaIdentity{display:flex!important;align-items:center!important;gap:10px!important;min-width:0!important}
+body.premium-mesario .mesarioUrnaIcon{width:36px;height:36px;flex:0 0 36px;display:grid;place-items:center;border-radius:11px;background:linear-gradient(145deg,#e8f0ff,#e4f8f5);font-size:18px;box-shadow:inset 0 1px #fff}
+body.premium-mesario .mesarioUrnaIdentity>div{min-width:0}
+body.premium-mesario .mesarioUrnaIdentity strong{display:block;color:#1c3c76!important;font-size:12px!important;overflow-wrap:anywhere}
+body.premium-mesario .mesarioUrnaIdentity small{display:block;color:#8996aa!important;font-size:9px!important;margin-top:3px!important}
+body.premium-mesario .mesarioUrnaBadges{display:flex!important;justify-content:flex-end!important;gap:5px!important;flex-wrap:wrap!important}
+body.premium-mesario .mesarioMiniBadge{font-size:8px!important;padding:5px 7px!important;letter-spacing:.025em!important}
+body.premium-mesario .mesarioUrnaEmpty{padding:14px;border:1px dashed #d6e2f2;border-radius:12px;background:#ffffff9c;color:#71809a;text-align:center;font-size:11px}
+@keyframes mesarioUrnaAppear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:900px){body.premium-mesario>header{flex-wrap:wrap!important;gap:9px!important}body.premium-mesario .mesarioHeaderLinks{width:100%!important;padding:0!important;margin:0!important;justify-content:flex-start!important}body.premium-mesario .mesarioHeaderLinks a{flex:1 1 auto!important}}
+@media(max-width:480px){body.premium-mesario .mesarioHeaderLinks{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:5px!important}body.premium-mesario .mesarioHeaderLinks a{min-width:0!important;padding:8px 4px!important;font-size:8px!important}body.premium-mesario .mesarioUrnaTileHead{align-items:flex-start!important;flex-direction:column!important}body.premium-mesario .mesarioUrnaBadges{justify-content:flex-start!important}}
+@media(prefers-reduced-motion:reduce){body.premium-mesario .mesarioUrnaTile{animation:none!important}}
+
+/* v292 — cartões de urnas estáticos: sem piscar, pulsar ou reaparecer */
+body.premium-mesario .mesarioUrnaTile,
+body.premium-mesario .mesarioUrnaTile *,
+body.premium-mesario .mesarioUrnaIcon,
+body.premium-mesario .mesarioMiniBadge{animation:none!important;transition:none!important}
+body.premium-mesario .mesarioUrnaTile:hover{transform:none!important;box-shadow:0 4px 13px #193b6e0a!important}
+body.premium-mesario .mesarioUrnaTile{opacity:1!important;visibility:visible!important}
