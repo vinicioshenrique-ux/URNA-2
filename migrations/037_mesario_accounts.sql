@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS mesario_accounts (id BIGSERIAL PRIMARY KEY, full_name TEXT NOT NULL, username TEXT NOT NULL UNIQUE, password_salt TEXT NOT NULL, password_hash TEXT NOT NULL, active BOOLEAN NOT NULL DEFAULT TRUE, created_at TIMESTAMPTZ NOT NULL DEFAULT now(), updated_at TIMESTAMPTZ NOT NULL DEFAULT now());
+ALTER TABLE mesario_sessions ADD COLUMN IF NOT EXISTS account_id BIGINT REFERENCES mesario_accounts(id) ON DELETE SET NULL;
+CREATE INDEX IF NOT EXISTS mesario_sessions_account_idx ON mesario_sessions(account_id);

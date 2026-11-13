@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS mesario_config (id integer PRIMARY KEY DEFAULT 1, pin_salt text NOT NULL, pin_hash text NOT NULL, updated_at timestamptz NOT NULL DEFAULT now());
+CREATE TABLE IF NOT EXISTS mesario_sessions (token text PRIMARY KEY, created_at timestamptz NOT NULL DEFAULT now(), expires_at timestamptz NOT NULL, revoked boolean NOT NULL DEFAULT false);
+CREATE TABLE IF NOT EXISTS mesario_queue (id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY, urna_id bigint NOT NULL REFERENCES urnas(id), voter_id bigint NOT NULL REFERENCES voters(id), session_token text NOT NULL UNIQUE, status text NOT NULL DEFAULT 'waiting', created_at timestamptz NOT NULL DEFAULT now(), claimed_at timestamptz, completed_at timestamptz);
+CREATE UNIQUE INDEX IF NOT EXISTS mesario_one_active_voter ON mesario_queue(voter_id) WHERE status IN ('waiting','claimed');
+CREATE UNIQUE INDEX IF NOT EXISTS mesario_one_active_urna ON mesario_queue(urna_id) WHERE status IN ('waiting','claimed');

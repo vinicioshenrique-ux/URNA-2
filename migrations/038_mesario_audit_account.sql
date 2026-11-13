@@ -1,0 +1,2 @@
+ALTER TABLE audit_log ADD COLUMN IF NOT EXISTS mesario_account_id BIGINT REFERENCES mesario_accounts(id) ON DELETE SET NULL;
+CREATE INDEX IF NOT EXISTS idx_audit_log_mesario_account_created ON audit_log(mesario_account_id, created_at DESC);
